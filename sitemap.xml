@@ -2,6 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   
   
   <url>
@@ -119,11 +120,16 @@
   </url>
 >>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
 =======
+=======
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
 <url>
 <loc>http://atimothee.github.io/blog/archives/</loc>
 </url>
 <url>
 <loc>http://atimothee.github.io/</loc>
 </url>
+<<<<<<< HEAD
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
+=======
 >>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
 </urlset>
