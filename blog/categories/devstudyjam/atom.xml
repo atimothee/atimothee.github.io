@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<<<<<<< HEAD
+  <title><![CDATA[Category: Devstudyjam | {t.log}]]></title>
+  <link href="http://timothyasiimwe.me/blog/categories/devstudyjam/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2015-02-23T19:47:54+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+=======
+  <title><![CDATA[Category: devstudyjam | Timothy Asiimwe]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <link href="http://atimothee.github.io/blog/categories/devstudyjam/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-07-09T21:26:53+03:00</updated>
+  <id>http://atimothee.github.io/</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+  <link href="http://timothyasiimwe.me/blog/categories/devstudyjam/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2016-07-09T21:54:16+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+  <link href="http://atimothee.xyz/blog/categories/devstudyjam/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-08-23T18:09:07+03:00</updated>
+  <id>http://atimothee.xyz/</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+  <author>
+    <name><![CDATA[Timothy Asiimwe]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[How to Easily Set Up an Offline Weather API Server for Your Sunshine App]]></title>
+    <link href="http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+=======
+    <title type="html"><![CDATA[How to easily set up an offline weather API Server for your Sunshine app]]></title>
+    <link href="http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <id>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+    <id>http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+    <id>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+    <content type="html"><![CDATA[<p>So you&rsquo;re eager to get on with Lesson 2 of the <a href="https://www.udacity.com/course/ud853">Udacity Android fundamentals course</a> but if you&rsquo;re like most students in our <a href="http://developerstudyjams.com/">study jam</a>, you don&rsquo;t have good internet access &amp; you&rsquo;ve been using offline course materials. The course has probably been going great till you hit the internet roadblock in lesson 2 (Connecting Sunshine to the cloud). The app needs internet to fetch the weather data.</p>
+
+<!-- more -->
+
+
+<p>This tutorial shows you a simple work around. We&rsquo;ll bring the &lsquo;cloud&rsquo; to your local machine. Well technically, just a tiny little bit of the cloud that you need to test your app. You don&rsquo;t need internet to fetch weather data. The only difference is that your data will be static and therefore not accurate but the data accuracy shouldn&rsquo;t be a big deal when trying to learn how to fetch weather data into the app.</p>
+
+<blockquote><p>For those not familiar with the Android Fundamentals course, the cloud in this context simply refers to the <a href="http://openweathermap.org/api">Open Weather Map API</a>.</p></blockquote>
+
+<p>This tutorial assumes you have python installed and have properly set your environment variables on your development PC. If you dont have it, follow any of these; <a href="http://www.howtogeek.com/197947/how-to-install-python-on-windows/">windows tutorial</a>, <a href="http://www.cyberciti.biz/faq/install-python-linux/">linux</a> or <a href="http://docs.python-guide.org/en/latest/starting/install/osx/">mac</a>.</p>
+
+<p>If you&rsquo;re not sure, simply type out <code>$ python --version</code> in your terminal (for unix users) or command prompt for windows users.</p>
+
+<p>If you have python installed, you should have received a message with the version of python installed.</p>
+
+<p>Next, open the built URL, which you&rsquo;re using in your app in the browser <a href="http://api.openweathermap.org/data/2.5/forecast/daily?q=kampala&amp;mode=json&amp;units=metric&amp;cnt=7">http://api.openweathermap.org/data/2.5/forecast/daily?q=kampala&amp;mode=json&amp;units=metric&amp;cnt=7</a> in my case. Note that the q param may change depending on your city.</p>
+
+<p>Copy and paste the returned JSON into an empty file and save it as city_name.json.</p>
+
+<p>This what my .json file showing forecast data for Kampala for the next seven days looks like
+<figure class='code'><figcaption><span>city_name.json</p></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="err">&lt;p&gt;</span><span class="p">{</span><span class="err">&amp;ldquo;cod&amp;rdquo;:&amp;ldquo;200&amp;rdquo;,&amp;ldquo;message&amp;rdquo;:0.03,&amp;ldquo;city&amp;rdquo;:{&amp;ldquo;id&amp;rdquo;:232422,&amp;ldquo;name&amp;rdquo;:&amp;ldquo;Kampala&amp;rdquo;,&amp;ldquo;coord&amp;rdquo;:{&amp;ldquo;lon&amp;rdquo;:32.582191,&amp;ldquo;lat&amp;rdquo;:0.31628</span><span class="p">}</span><span class="err">,&amp;ldquo;country&amp;rdquo;:&amp;ldquo;UG&amp;rdquo;,&amp;ldquo;population&amp;rdquo;:</span><span class="mi">0</span><span class="err">,&amp;ldquo;sys&amp;rdquo;:</span><span class="p">{</span><span class="err">&amp;ldquo;population&amp;rdquo;:0</span><span class="p">}</span><span class="err">},&amp;ldquo;cnt&amp;rdquo;:</span><span class="mi">7</span><span class="err">,&amp;ldquo;list&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1424685600,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:27.61,&amp;ldquo;min&amp;rdquo;:25.94,&amp;ldquo;max&amp;rdquo;:27.61,&amp;ldquo;night&amp;rdquo;:25.94,&amp;ldquo;eve&amp;rdquo;:27.52,&amp;ldquo;morn&amp;rdquo;:27.61</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">895.42</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">85</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">2.57</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">225</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">0</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1424772000,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:27.19,&amp;ldquo;min&amp;rdquo;:25.45,&amp;ldquo;max&amp;rdquo;:27.26,&amp;ldquo;night&amp;rdquo;:25.91,&amp;ldquo;eve&amp;rdquo;:26.88,&amp;ldquo;morn&amp;rdquo;:25.45</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">898.48</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">88</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:802,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clouds&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;scattered</span> <span class="err">clouds&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;03d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">0.76</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">192</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">44</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1424858400,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:27.89,&amp;ldquo;min&amp;rdquo;:25.83,&amp;ldquo;max&amp;rdquo;:27.89,&amp;ldquo;night&amp;rdquo;:25.83,&amp;ldquo;eve&amp;rdquo;:27.24,&amp;ldquo;morn&amp;rdquo;:26.06</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">897.35</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">83</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mi">5</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">149</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">0</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1424944800,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:27.72,&amp;ldquo;min&amp;rdquo;:25.75,&amp;ldquo;max&amp;rdquo;:27.98,&amp;ldquo;night&amp;rdquo;:25.75,&amp;ldquo;eve&amp;rdquo;:27.68,&amp;ldquo;morn&amp;rdquo;:26.26</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">897.27</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">84</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">5.32</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">153</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">0</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1425031200,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:28.62,&amp;ldquo;min&amp;rdquo;:24.01,&amp;ldquo;max&amp;rdquo;:28.62,&amp;ldquo;night&amp;rdquo;:24.01,&amp;ldquo;eve&amp;rdquo;:25.85,&amp;ldquo;morn&amp;rdquo;:25.76</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">896.46</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">0</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">1.96</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">82</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">6</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1425117600,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:28.42,&amp;ldquo;min&amp;rdquo;:24.35,&amp;ldquo;max&amp;rdquo;:28.42,&amp;ldquo;night&amp;rdquo;:24.35,&amp;ldquo;eve&amp;rdquo;:25.87,&amp;ldquo;morn&amp;rdquo;:24.72</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">896.7</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">0</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">0.91</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">300</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">2</span><span class="err">}</span><span class="p">,{</span><span class="err">&amp;ldquo;dt&amp;rdquo;:1425204000,&amp;ldquo;temp&amp;rdquo;:{&amp;ldquo;day&amp;rdquo;:28.51,&amp;ldquo;min&amp;rdquo;:24.47,&amp;ldquo;max&amp;rdquo;:28.51,&amp;ldquo;night&amp;rdquo;:24.47,&amp;ldquo;eve&amp;rdquo;:25.89,&amp;ldquo;morn&amp;rdquo;:25.62</span><span class="p">},</span><span class="err">&amp;ldquo;pressure&amp;rdquo;:</span><span class="mf">895.82</span><span class="p">,</span><span class="err">&amp;ldquo;humidity&amp;rdquo;:</span><span class="mi">0</span><span class="p">,</span><span class="err">&amp;ldquo;weather&amp;rdquo;:</span><span class="p">[{</span><span class="err">&amp;ldquo;id&amp;rdquo;:800,&amp;ldquo;main&amp;rdquo;:&amp;ldquo;Clear&amp;rdquo;,&amp;ldquo;description&amp;rdquo;:&amp;ldquo;sky</span> <span class="err">is</span> <span class="err">clear&amp;rdquo;,&amp;ldquo;icon&amp;rdquo;:&amp;ldquo;01d&amp;rdquo;</span><span class="p">}],</span><span class="err">&amp;ldquo;speed&amp;rdquo;:</span><span class="mf">1.69</span><span class="p">,</span><span class="err">&amp;ldquo;deg&amp;rdquo;:</span><span class="mi">198</span><span class="p">,</span><span class="err">&amp;ldquo;clouds&amp;rdquo;:</span><span class="mi">4</span><span class="err">}</span><span class="p">]</span><span class="err">}&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;pre&gt;&lt;code&gt;</span>
+</span><span class='line'><span class="err">Once</span> <span class="err">you</span> <span class="err">have</span> <span class="err">the</span> <span class="err">JSON</span> <span class="err">file,</span> <span class="err">create</span> <span class="err">a</span> <span class="err">folder</span> <span class="err">somewhere</span> <span class="err">on</span> <span class="err">your</span> <span class="err">PC</span> <span class="err">(call</span> <span class="err">it</span> <span class="err">whatever</span> <span class="err">you</span> <span class="err">want)</span> <span class="err">and</span> <span class="err">save</span> <span class="err">it</span> <span class="err">there.</span> <span class="err">Then</span> <span class="err">change</span> <span class="err">directory</span> <span class="err">to</span> <span class="err">that</span> <span class="err">directory</span> <span class="err">in</span> <span class="err">your</span> <span class="err">terminal</span> <span class="err">or</span> <span class="err">command</span> <span class="err">prompt(windows</span> <span class="err">users),</span> <span class="err">using</span> <span class="err">the</span> <span class="err">cd</span> <span class="err">command.</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">Then</span> <span class="err">when</span> <span class="err">you&#39;re</span> <span class="err">in</span> <span class="err">that</span> <span class="err">directory,</span> <span class="err">type</span> <span class="err">this</span> <span class="err">out</span> <span class="err">in</span> <span class="err">your</span> <span class="err">terminal</span>
+</span><span class='line'><span class="err">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="err">&lt;p&gt;$</span> <span class="err">python</span> <span class="err">-m</span> <span class="err">SimpleHTTPServer</span>
+</span></code></pre></td></tr></table></div></figure></p>
+
+<p>This command starts up a local server that serves the contents of the current directory.</p>
+
+<p>If that went well, you should see something like this</p>
+
+<pre><code class="bash server started">Serving HTTP on 0.0.0.0 port 8000 ...
+</code></pre>
+
+<p>Now go to <a href="http://localhost:8000/city_name.json">http://localhost:8000/city_name.json</a> in your browser.
+If you get your json data returned, then high five. You have brought the cloud down to earth.</p>
+
+<h2>Now for the Android part</h2>
+
+<p>This is the code that was fetching the data from the open weather map API, in the doInBackground method of the
+FetchWeather AsyncTask.
+<figure class='code'><figcaption><span>fetch from online</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">FORECAST_BASE_URL</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://api.openweathermap.org/data/2.5/forecast/daily?&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//api.openweathermap.org/data/2.5/forecast/daily?&lt;/a&gt;&amp;rdquo;;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">QUERY_PARAM</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">q</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">FORMAT_PARAM</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">mode</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">UNITS_PARAM</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">units</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">DAYS_PARAM</span> <span class="o">=</span> <span class="o">&amp;</span><span class="n">ldquo</span><span class="o">;</span><span class="n">cnt</span><span class="o">&amp;</span><span class="n">rdquo</span><span class="o">;;</span>
+</span><span class='line'> <span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">FORECAST_BASE_URL</span><span class="o">).</span><span class="na">buildUpon</span><span class="o">()</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">QUERY_PARAM</span><span class="o">,</span> <span class="n">params</span><span class="o">[</span><span class="mi">0</span><span class="o">])</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">FORMAT_PARAM</span><span class="o">,</span> <span class="n">format</span><span class="o">)</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">UNITS_PARAM</span><span class="o">,</span> <span class="n">units</span><span class="o">)</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">DAYS_PARAM</span><span class="o">,</span> <span class="n">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">numDays</span><span class="o">))</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">build</span><span class="o">();&lt;/</span><span class="n">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span>            <span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">builtUri</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">pre</span><span class="o">&gt;&lt;</span><span class="n">code</span><span class="o">&gt;</span><span class="n">In</span> <span class="n">order</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">from</span> <span class="n">local</span> <span class="n">host</span><span class="o">,</span> <span class="n">we</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">going</span> <span class="n">to</span> <span class="n">modify</span> <span class="n">it</span> <span class="n">a</span> <span class="n">little</span><span class="o">.</span>
+</span><span class='line'><span class="n">First</span> <span class="n">of</span> <span class="n">all</span><span class="o">,</span> <span class="n">one</span> <span class="n">limitation</span> <span class="n">of</span> <span class="n">our</span> <span class="n">offline</span> <span class="n">server</span> <span class="n">is</span> <span class="n">we</span> <span class="n">cant</span> <span class="n">support</span> <span class="n">url</span> <span class="n">params</span><span class="o">.</span>
+</span><span class='line'><span class="n">But</span> <span class="n">that</span> <span class="n">doesn</span><span class="err">&#39;</span><span class="n">t</span> <span class="n">really</span> <span class="n">matter</span><span class="o">,</span> <span class="n">since</span> <span class="n">we</span> <span class="n">just</span> <span class="n">want</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">the</span> <span class="n">weather</span> <span class="n">data</span> <span class="n">into</span> <span class="n">the</span> <span class="n">app</span><span class="o">.</span>
+</span><span class='line'><span class="n">We</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">not</span> <span class="n">interested</span> <span class="n">in</span> <span class="n">the</span> <span class="n">data</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">accuracy</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Something</span> <span class="k">else</span> <span class="n">to</span> <span class="n">note</span><span class="o">,</span> <span class="n">is</span> <span class="n">that</span> <span class="n">when</span> <span class="n">using</span> <span class="n">the</span> <span class="n">Android</span> <span class="n">Virtual</span> <span class="nf">Device</span> <span class="o">(</span><span class="n">emulator</span><span class="o">),</span> <span class="n">localhost</span> <span class="n">becomes</span> <span class="mf">10.0</span><span class="o">.</span><span class="mf">2.2</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">When</span> <span class="n">using</span> <span class="n">Genymotion</span> <span class="n">emulator</span><span class="o">,</span> <span class="n">localhost</span> <span class="n">is</span> <span class="mf">192.168</span><span class="o">.</span><span class="mf">56.1</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">If</span> <span class="n">you</span><span class="err">&#39;</span><span class="n">re</span> <span class="n">using</span> <span class="n">a</span> <span class="n">physical</span> <span class="n">device</span><span class="o">,</span> <span class="n">you</span><span class="err">&#39;</span><span class="n">ll</span> <span class="n">need</span> <span class="n">to</span> <span class="n">be</span> <span class="n">on</span> <span class="n">the</span> <span class="n">same</span> <span class="n">network</span> <span class="n">as</span> <span class="n">your</span> <span class="n">PC</span><span class="o">,</span> <span class="n">in</span> <span class="n">which</span> <span class="k">case</span><span class="o">,</span> <span class="n">you</span> <span class="n">need</span> <span class="n">replace</span> <span class="n">localhost</span> <span class="n">with</span> <span class="n">your</span> <span class="n">computer</span><span class="err">&#39;</span><span class="n">s</span> <span class="n">current</span> <span class="n">IP</span><span class="o">.</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">Add</span> <span class="k">this</span> <span class="n">line</span> <span class="n">of</span> <span class="n">code</span> <span class="n">to</span> <span class="n">the</span> <span class="n">doInBackground</span> <span class="n">method</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Fetch</span> <span class="n">AsyncTask</span><span class="o">,</span> <span class="n">just</span> <span class="n">above</span> <span class="n">the</span> <span class="n">line</span> <span class="n">that</span> <span class="n">instantiaties</span> <span class="n">the</span> <span class="n">url</span><span class="o">.</span> <span class="n">Remember</span> <span class="n">to</span> <span class="n">comment</span> <span class="n">it</span> <span class="n">out</span> <span class="n">when</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">fetch</span> <span class="n">from</span> <span class="n">the</span> <span class="n">internet</span><span class="o">.</span>
+</span><span class='line'><span class="o">&lt;/</span><span class="n">code</span><span class="o">&gt;&lt;/</span><span class="n">pre</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">in</span> <span class="k">case</span> <span class="n">using</span> <span class="n">stock</span> <span class="n">emulator</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://10.0.2.2:8000/city_name.json&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//10.0.2.2:8000/city_name.json&lt;/a&gt;&amp;rdquo;).buildUpon().build();&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/&lt;</span><span class="n">em</span><span class="o">&gt;</span> <span class="n">in</span> <span class="k">case</span> <span class="n">using</span> <span class="n">genymotion</span> <span class="n">emulator</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://192.168.56.1:8000/city_name.json&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//192.168.56.1:8000/city_name.json&lt;/a&gt;&amp;rdquo;).buildUpon().build();&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="n">p</span><span class="o">&gt;/&lt;</span><span class="n">em</span><span class="o">&gt;</span><span class="n">in</span> <span class="k">case</span> <span class="n">of</span> <span class="n">physical</span> <span class="n">device</span><span class="o">&lt;/</span><span class="n">em</span><span class="o">&gt;/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(&amp;</span><span class="n">ldquo</span><span class="o">;&lt;</span><span class="n">a</span> <span class="n">href</span><span class="o">=</span><span class="s">&quot;http://ip_address:8000/city_name.json&quot;</span><span class="o">&gt;</span><span class="nl">http:</span><span class="c1">//ip_address:8000/city_name.json&lt;/a&gt;&amp;rdquo;).buildUpon().build();</span>
+</span></code></pre></td></tr></table></div></figure>
+And voila, you&rsquo;ve successfully connected sunshine to the local &lsquo;cloud&rsquo;.</p>
+]]></content>
+  </entry>
+  
+</feed>

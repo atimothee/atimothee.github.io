@@ -1,0 +1,20 @@
+User-agent: *
+Disallow: 
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+Sitemap: http://timothyasiimwe.me/sitemap.xml 
+=======
+Sitemap: http://atimothee.github.io/sitemap.xml 
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+Sitemap: http://timothyasiimwe.me/sitemap.xml 
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+Sitemap: http://atimothee.xyz/sitemap.xml 
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+=======
+Sitemap: http://atimothee.github.io/sitemap.xml 
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2

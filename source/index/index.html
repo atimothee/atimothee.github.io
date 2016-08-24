@@ -1,0 +1,31 @@
+---
+layout: default
+title: index
+---
+
+<div class='categories'>
+	<h6>Posts by category:</h6>
+	<p>| 
+	{% for category in site.categories %}
+	 <a href='{{ root_url }}/categories/{{ category[0] }}'>{{ category[0] }}({{ category[1].size }})</a> |
+	{% endfor %}
+	</p>
+</div>
+<div class='index'>
+	{% for post in site.posts reverse %}
+	{% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+	{% capture this_month %}{{ post.date | date: "%B" }}{% endcapture %}
+
+	{% unless year == this_year %}
+	{% assign year = this_year %}
+	<h5>{{ year }}</h5>
+	{% endunless %}
+
+	{% unless month == this_month %}
+	{% assign month = this_month %}
+	<h6>{{ month }}</h6>
+	{% endunless %}
+
+	<a href='{{ post.url }}'>{{ post.title }}</a><br>
+	{% endfor %}
+</div>

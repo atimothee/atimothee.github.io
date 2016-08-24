@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<<<<<<< HEAD
+<<<<<<< HEAD
+  
+  
+  <url>
+    <loc>http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/</loc>
+    <lastmod>2015-02-23T01:11:58+03:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer/</loc>
+    <lastmod>2014-08-02T02:09:34+03:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
+    <loc>http://timothyasiimwe.me/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/</loc>
+    <lastmod>2013-12-30T20:05:15+03:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  
+  
+  <url>
+    <loc>http://timothyasiimwe.me/blog/</loc>
+    <lastmod>2015-02-23T19:47:54+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://timothyasiimwe.me/</loc>
+    <lastmod>2015-02-23T19:47:54+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  <url>
+    <loc>http://timothyasiimwe.me/blog/archives/</loc>
+    <lastmod>2015-02-23T19:47:54+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>http://timothyasiimwe.me/about/</loc>
+    <lastmod>2015-02-23T19:47:54+03:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+=======
+  <url>
+    <loc>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/</loc>
+    <lastmod>2015-02-23T01:11:58+03:00</lastmod>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/</loc>
+    <lastmod>2014-08-02T02:09:34+03:00</lastmod>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/</loc>
+    <lastmod>2013-12-30T20:05:15+03:00</lastmod>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/404.html</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/archives/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/about/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/index/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/about/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/programming/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/reflection/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/lessons/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/devstudyjam/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/android/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/udacity/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/gdg/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/blog/categories/tutorial/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.xyz/about.html</loc>
+    <lastmod>2016-07-09T20:35:41+03:00</lastmod>
+  </url>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+<url>
+<loc>http://atimothee.github.io/blog/archives/</loc>
+</url>
+<url>
+<loc>http://atimothee.github.io/</loc>
+</url>
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
+</urlset>

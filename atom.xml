@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <title><![CDATA[{t.log}]]></title>
+  <link href="http://timothyasiimwe.me/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2015-02-23T19:47:54+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+=======
+  <title><![CDATA[Timothy Asiimwe]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <link href="http://atimothee.github.io/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-07-09T21:26:53+03:00</updated>
+  <id>http://atimothee.github.io/</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+  <link href="http://timothyasiimwe.me/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2016-07-09T21:54:16+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+  <link href="http://atimothee.xyz/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-08-23T18:09:07+03:00</updated>
+  <id>http://atimothee.xyz/</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+  <author>
+    <name><![CDATA[Timothy Asiimwe]]></name>
+=======
+  <title><![CDATA[My Octopress Blog]]></title>
+  <link href="http://atimothee.github.io/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-08-24T09:49:16+03:00</updated>
+  <id>http://atimothee.github.io/</id>
+  <author>
+    <name><![CDATA[Your Name]]></name>
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+<<<<<<< HEAD
+  <entry>
+    <title type="html"><![CDATA[How to Easily Set Up an Offline Weather API Server for Your Sunshine App]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <link href="http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+=======
+    <link href="http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+    <id>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+    <link href="http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+    <link href="http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <updated>2015-02-23T01:11:58+03:00</updated>
+    <id>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+    <content type="html"><![CDATA[<p>So you&rsquo;re eager to get on with Lesson 2 of the <a href="https://www.udacity.com/course/ud853">Udacity Android fundamentals course</a> but if you&rsquo;re like most students in our <a href="http://developerstudyjams.com/">study jam</a>, you don&rsquo;t have good internet access &amp; you&rsquo;ve been using offline course materials. The course has probably been going great till you hit the internet roadblock in lesson 2 (Connecting Sunshine to the cloud). The app needs internet to fetch the weather data.</p>
+
+<!-- more -->
+
+
+<p>This tutorial shows you a simple work around. We&rsquo;ll bring the &lsquo;cloud&rsquo; to your local machine. Well technically, just a tiny little bit of the cloud that you need to test your app. You don&rsquo;t need internet to fetch weather data. The only difference is that your data will be static and therefore not accurate but the data accuracy shouldn&rsquo;t be a big deal when trying to learn how to fetch weather data into the app.</p>
+
+<blockquote><p>For those not familiar with the Android Fundamentals course, the cloud in this context simply refers to the <a href="http://openweathermap.org/api">Open Weather Map API</a>.</p></blockquote>
+
+<p>This tutorial assumes you have python installed and have properly set your environment variables on your development PC. If you dont have it, follow any of these; <a href="http://www.howtogeek.com/197947/how-to-install-python-on-windows/">windows tutorial</a>, <a href="http://www.cyberciti.biz/faq/install-python-linux/">linux</a> or <a href="http://docs.python-guide.org/en/latest/starting/install/osx/">mac</a>.</p>
+
+<p>If you&rsquo;re not sure, simply type out <code>$ python --version</code> in your terminal (for unix users) or command prompt for windows users.</p>
+
+<p>If you have python installed, you should have received a message with the version of python installed.</p>
+
+<p>Next, open the built URL, which you&rsquo;re using in your app in the browser <a href="http://api.openweathermap.org/data/2.5/forecast/daily?q=kampala&amp;mode=json&amp;units=metric&amp;cnt=7">http://api.openweathermap.org/data/2.5/forecast/daily?q=kampala&amp;mode=json&amp;units=metric&amp;cnt=7</a> in my case. Note that the q param may change depending on your city.</p>
+
+<p>Copy and paste the returned JSON into an empty file and save it as city_name.json.</p>
+
+<p>This what my .json file showing forecast data for Kampala for the next seven days looks like</p>
+
+<figure class='code'><figcaption><span>city_name.json</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='json'><span class='line'><span class="p">{</span><span class="nt">&quot;cod&quot;</span><span class="p">:</span><span class="s2">&quot;200&quot;</span><span class="p">,</span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="mf">0.03</span><span class="p">,</span><span class="nt">&quot;city&quot;</span><span class="p">:{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">232422</span><span class="p">,</span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="s2">&quot;Kampala&quot;</span><span class="p">,</span><span class="nt">&quot;coord&quot;</span><span class="p">:{</span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="mf">32.582191</span><span class="p">,</span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="mf">0.31628</span><span class="p">},</span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="s2">&quot;UG&quot;</span><span class="p">,</span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;sys&quot;</span><span class="p">:{</span><span class="nt">&quot;population&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}},</span><span class="nt">&quot;cnt&quot;</span><span class="p">:</span><span class="mi">7</span><span class="p">,</span><span class="nt">&quot;list&quot;</span><span class="p">:[{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1424685600</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">27.61</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">25.94</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">27.61</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">25.94</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">27.52</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">27.61</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">895.42</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">85</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">2.57</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">225</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1424772000</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">27.19</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">25.45</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">27.26</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">25.91</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">26.88</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">25.45</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">898.48</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">88</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">802</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clouds&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;scattered clouds&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;03d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">0.76</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">192</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">44</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1424858400</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">27.89</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">25.83</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">27.89</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">25.83</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">27.24</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">26.06</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">897.35</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">83</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mi">5</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">149</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1424944800</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">27.72</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">25.75</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">27.98</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">25.75</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">27.68</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">26.26</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">897.27</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">84</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">5.32</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">153</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1425031200</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">28.62</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">24.01</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">28.62</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">24.01</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">25.85</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">25.76</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">896.46</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">1.96</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">82</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">6</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1425117600</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">28.42</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">24.35</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">28.42</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">24.35</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">25.87</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">24.72</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">896.7</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">0.91</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">300</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">2</span><span class="p">},{</span><span class="nt">&quot;dt&quot;</span><span class="p">:</span><span class="mi">1425204000</span><span class="p">,</span><span class="nt">&quot;temp&quot;</span><span class="p">:{</span><span class="nt">&quot;day&quot;</span><span class="p">:</span><span class="mf">28.51</span><span class="p">,</span><span class="nt">&quot;min&quot;</span><span class="p">:</span><span class="mf">24.47</span><span class="p">,</span><span class="nt">&quot;max&quot;</span><span class="p">:</span><span class="mf">28.51</span><span class="p">,</span><span class="nt">&quot;night&quot;</span><span class="p">:</span><span class="mf">24.47</span><span class="p">,</span><span class="nt">&quot;eve&quot;</span><span class="p">:</span><span class="mf">25.89</span><span class="p">,</span><span class="nt">&quot;morn&quot;</span><span class="p">:</span><span class="mf">25.62</span><span class="p">},</span><span class="nt">&quot;pressure&quot;</span><span class="p">:</span><span class="mf">895.82</span><span class="p">,</span><span class="nt">&quot;humidity&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span><span class="nt">&quot;weather&quot;</span><span class="p">:[{</span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="mi">800</span><span class="p">,</span><span class="nt">&quot;main&quot;</span><span class="p">:</span><span class="s2">&quot;Clear&quot;</span><span class="p">,</span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="s2">&quot;sky is clear&quot;</span><span class="p">,</span><span class="nt">&quot;icon&quot;</span><span class="p">:</span><span class="s2">&quot;01d&quot;</span><span class="p">}],</span><span class="nt">&quot;speed&quot;</span><span class="p">:</span><span class="mf">1.69</span><span class="p">,</span><span class="nt">&quot;deg&quot;</span><span class="p">:</span><span class="mi">198</span><span class="p">,</span><span class="nt">&quot;clouds&quot;</span><span class="p">:</span><span class="mi">4</span><span class="p">}]}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Once you have the JSON file, create a folder somewhere on your PC (call it whatever you want) and save it there. Then change directory to that directory in your terminal or command prompt(windows users), using the cd command.</p>
+
+<p>Then when you&rsquo;re in that directory, type this out in your terminal</p>
+
+<figure class='code'><figcaption><span>start the server</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>python -m SimpleHTTPServer
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>This command starts up a local server that serves the contents of the current directory.</p>
+
+<p>If that went well, you should see something like this</p>
+
+<figure class='code'><figcaption><span>server started</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>Serving HTTP on 0.0.0.0 port <span class="m">8000</span> ...
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Now go to <a href="http://localhost:8000/city_name.json">http://localhost:8000/city_name.json</a> in your browser.
+If you get your json data returned, then high five. You have brought the cloud down to earth.</p>
+
+<h2>Now for the Android part</h2>
+
+<p>This is the code that was fetching the data from the open weather map API, in the doInBackground method of the
+FetchWeather AsyncTask.</p>
+
+<figure class='code'><figcaption><span>fetch from online</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">FORECAST_BASE_URL</span> <span class="o">=</span> <span class="s">&quot;http://api.openweathermap.org/data/2.5/forecast/daily?&quot;</span><span class="o">;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">QUERY_PARAM</span> <span class="o">=</span> <span class="s">&quot;q&quot;</span><span class="o">;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">FORMAT_PARAM</span> <span class="o">=</span> <span class="s">&quot;mode&quot;</span><span class="o">;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">UNITS_PARAM</span> <span class="o">=</span> <span class="s">&quot;units&quot;</span><span class="o">;</span>
+</span><span class='line'> <span class="kd">final</span> <span class="n">String</span> <span class="n">DAYS_PARAM</span> <span class="o">=</span> <span class="s">&quot;cnt&quot;</span><span class="o">;</span>
+</span><span class='line'> <span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">FORECAST_BASE_URL</span><span class="o">).</span><span class="na">buildUpon</span><span class="o">()</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">QUERY_PARAM</span><span class="o">,</span> <span class="n">params</span><span class="o">[</span><span class="mi">0</span><span class="o">])</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">FORMAT_PARAM</span><span class="o">,</span> <span class="n">format</span><span class="o">)</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">UNITS_PARAM</span><span class="o">,</span> <span class="n">units</span><span class="o">)</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">appendQueryParameter</span><span class="o">(</span><span class="n">DAYS_PARAM</span><span class="o">,</span> <span class="n">Integer</span><span class="o">.</span><span class="na">toString</span><span class="o">(</span><span class="n">numDays</span><span class="o">))</span>
+</span><span class='line'>                        <span class="o">.</span><span class="na">build</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>
+</span><span class='line'>                <span class="n">URL</span> <span class="n">url</span> <span class="o">=</span> <span class="k">new</span> <span class="nf">URL</span><span class="o">(</span><span class="n">builtUri</span><span class="o">.</span><span class="na">toString</span><span class="o">());</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>In order to fetch from local host, we&rsquo;re going to modify it a little.
+First of all, one limitation of our offline server is we cant support url params.
+But that doesn&rsquo;t really matter, since we just want to fetch the weather data into the app.
+We&rsquo;re not interested in the data&rsquo;s accuracy.</p>
+
+<p>Something else to note, is that when using the Android Virtual Device (emulator), localhost becomes 10.0.2.2</p>
+
+<p>When using Genymotion emulator, localhost is 192.168.56.1</p>
+
+<p>If you&rsquo;re using a physical device, you&rsquo;ll need to be on the same network as your PC, in which case, you need replace localhost with your computer&rsquo;s current IP.</p>
+
+<p>Add this line of code to the doInBackground method of the Fetch AsyncTask, just above the line that instantiaties the url. Remember to comment it out when you want to fetch from the internet.</p>
+
+<figure class='code'><figcaption><span>fetch from localhost</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'><span class="cm">/*in case using stock emulator*/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">&quot;http://10.0.2.2:8000/city_name.json&quot;</span><span class="o">).</span><span class="na">buildUpon</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/* in case using genymotion emulator*/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">&quot;http://192.168.56.1:8000/city_name.json&quot;</span><span class="o">).</span><span class="na">buildUpon</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+</span><span class='line'>
+</span><span class='line'><span class="cm">/*in case of physical device*/</span>
+</span><span class='line'><span class="n">Uri</span> <span class="n">builtUri</span> <span class="o">=</span> <span class="n">Uri</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="s">&quot;http://ip_address:8000/city_name.json&quot;</span><span class="o">).</span><span class="na">buildUpon</span><span class="o">().</span><span class="na">build</span><span class="o">();</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>And voila, you&rsquo;ve successfully connected sunshine to the local &lsquo;cloud&rsquo;.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Reflections of a Programmer]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <link href="http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer</id>
+=======
+    <link href="http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+    <id>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+    <link href="http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+    <link href="http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+    <id>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+    <content type="html"><![CDATA[<p>Every once in a while I like to reflect on life. And there’s no better time than now. I literally have nothing to chase, no deadline to beat, no books, no exams. So I’ve been thinking, alot about the unobvious benefits of being a software developer.</p>
+
+<p>Programming involves a lot of thinking and overtime, it changes the way you think about life and stuff in general. So here are five important lessons that I’ve learned through my experience writing code for the most part of my waking hours.</p>
+
+<!-- more -->
+
+
+<p><strong>1. It’s okay to fail</strong></p>
+
+<blockquote><p>&ldquo;If at first you don&rsquo;t succeed, call it version 1.0 - Unknown&rdquo;</p></blockquote>
+
+<p>The error log is the developer’s best friend. Errors, exceptions and bugs are all part of the game. Errors<em>(read failures)</em> ought not to be dreaded, but should instead be thought of as the blueprint for how to fix the program or code to run better. Even the mighty Apple and Microsoft of this world have shipped buggy software before. Some have been <a href="http://www.huffingtonpost.com/2013/09/25/apple-maps-bad_n_3990340.html">more embarassing</a> than others but the most important thing is that they release updates and patches. When you fail, instead of stagnating in misery, find out what could have caused it, fix it and release an update. Don&rsquo;t let failure keep you from moving.</p>
+
+<p><strong>2. Faith</strong><br>
+A lot of software developers are willing to take on work they have no idea how to do <em>(Not sure about most, but at least I am)</em>. I think it’s partly because of the excitement of trying out something new, but also because we&rsquo;ve gotten away with it in the past. Somehow, I’ve learned to have the confidence that things will pan out okay, and I&rsquo;ll deliver, no matter how humongous the task at hand is.</p>
+
+<p><strong>3. Great software evolves <em>(Embrace Change)</em> </strong></p>
+
+<blockquote><p>“To improve is to change, to be perfect is to change often” - Winston Churchill</p></blockquote>
+
+<p>If you own a smart device, then I’m sure you receive notifications of apps that want to update almost every week or even every day.</p>
+
+<p>Software changes a lot over its lifetime. The Google home page today is very different from the <a href="http://en.wikipedia.org/wiki/File:Google1998.png">first one in 1998</a>. The same goes for Microsoft Windows and many other programs.</p>
+
+<p>Building software has taught me to embrace change, even radical change. So much changes in so little time in the software industry. The rapid pace of innovation renders some technologies obsolete, so one has to be willing to adapt and try out new stuff. This leads me to the next lesson.</p>
+
+<p><strong>4. Let go</strong><br>
+In line with lesson #3, one thing development has taught me is the art of letting go. Sometimes you have to let go of that piece of code that you spent hours or days writing, either because it&rsquo;s either <a href="http://en.wikipedia.org/wiki/Code_smell">smelly</a> or it&rsquo;s just no longer relevant. Such is the nature of the industry, it moves so fast that at one point or another, you may have to <a href="http://www.infoq.com/articles/twitter-java-use">rewrite your app</a> simply because there&rsquo;s a newer or better way of implementing your solution. And such is life, as we grow, our priorities tend to shift. Therefore, embrace change.</p>
+
+<blockquote><p>“When you become a software engineer, you have signed a life-long pact to never stop learning” - Unknown</p></blockquote>
+
+<p>Nothing cements this more than <a href="http://techcrunch.com/2014/06/02/apple-launches-swift-a-new-programming-language-for-writing-ios-and-os-x-apps/">the news a few weeks back</a> that Apple released a new programming language. Although Objective-C hasn’t been trashed per se, iOS development will shift to <a href="https://developer.apple.com/swift/">Swift</a> as the primary language, so iOS devs have no choice but to adapt to the change.</p>
+
+<p><strong>5. Give back to the community: Freely you have received, freely you should give</strong></p>
+
+<blockquote><p>&ldquo;If I have seen further than others, it is by standing upon the shoulders of giants.&rdquo; - Isaac Newton</p></blockquote>
+
+<p>The average developer is bound to use some open-source library or tool in their work. Big software companies have open-sourced a lot of their software projects and libraries in this spirit. Open-source has driven the software industry to where it is today, so we’re indebited to give back to the software community and society at large.</p>
+
+<p>But even outside the software industry, many products today wouldn&rsquo;t be here without some of the work done by some people generations ago. So every once in a while, do something for community&rsquo;s sake.</p>
+
+<p><strong>The downside:</strong><br>
+You cant roll back life:
+If you’re familiar with version control, then you know that you can roll back to a previous commit, in case you encounter serious problems with your code base and it will be like it never happened. Unfortunately in the real world, when you eff up, as much as you can move on, the scars remain.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[The Stars of 2013: Remembering the Fallen Soldiers]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <link href="http://timothyasiimwe.me/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <updated>2013-12-30T20:05:15+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+=======
+    <link href="http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <updated>2013-12-30T20:05:15+03:00</updated>
+    <id>http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+    <link href="http://timothyasiimwe.me/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <updated>2013-12-30T20:05:15+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+    <link href="http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <updated>2013-12-30T20:05:15+03:00</updated>
+    <id>http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+    <content type="html"><![CDATA[<p>If you watch <a href="http://www.imdb.com/title/tt1796960/">Homeland</a> or are familiar with CIA operation, then you probably know what happens when an agent dies in the line of service. They become a star, which is placed on <a href="http://en.wikipedia.org/wiki/CIA_Memorial_Wall">the memorial wall</a> at an emotional ceremony and words along these lines will be said -</p>
+
+<blockquote><p>“For the men and women of the CIA, this constellation is more than a memorial, more than a quiet tribute. Each star holds memories of a brave intelligence officer whose example we follow, a treasured colleague whose wisdom we keep, or a lost friend we will miss. <!-- more -->They are our heroes, and that’s how we’ll remember them”</p></blockquote>
+
+<p>Now in my line of work, these agents take on another form. If I’m to borrow Mr. Wonderful’s analogy from <a href="http://www.imdb.com/title/tt1442550/">Shark Tank</a> -</p>
+
+<blockquote><p>“Here’s how I think of my money – as soldiers – I send them out to war everyday. I want them to take prisoners and come home, so there’s more of them”.</p></blockquote>
+
+<p>I share the same sentiment with him, except that in my case my devices are the soldiers. Unfortunately, some times these soldiers don’t make it back from the battle. As this year winds down, I have three stars to put up and I think they deserve honourable mention here.</p>
+
+<p><strong>1. Special Agent HP P</strong><br>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<img src="http://timothyasiimwe.me/images/hp_probook.jpg" /></p>
+=======
+<img src="http://atimothee.github.io/images/hp_probook.jpg" /></p>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+<img src="http://timothyasiimwe.me/images/hp_probook.jpg" /></p>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+<img src="http://atimothee.xyz/images/hp_probook.jpg" /></p>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+
+<p>This guy was the true definition of “Service above self”. He was always up for the task, even when I asked for the impossible from him. He went through a number of clean installations but still emerged sentient. Dude condensed a whole flask of water but still continued diligently serving. I couldn’t have asked for more from you agent. Unfortunately, Kampala’s sharp guys managed to snack you away from me.(A story for another day). You, agent HP P saw me advance from Hello World! to real world code, and for that I’m truly grateful.</p>
+
+<p><strong>2. Agent 3GS</strong><br>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<img src="http://timothyasiimwe.me/images/iphone_3gs.jpg" /></p>
+=======
+<img src="http://atimothee.github.io/images/iphone_3gs.jpg" /></p>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+<img src="http://timothyasiimwe.me/images/iphone_3gs.jpg" /></p>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+<img src="http://atimothee.xyz/images/iphone_3gs.jpg" /></p>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+
+<p>Another great agent. Unfortunately he entered a comma that he’ll probably never recover from. The experts call it a bricked state. My futile jailbreaking attempts to keep him up to date with Apple are responsible for his demise. But nonetheless, his was a life like no other. He introduced me to the world of smartphones.</p>
+
+<p><strong>3. Agent WD</strong><br>
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<img src="http://timothyasiimwe.me/images/mypassport_hdd.jpg" /></p>
+=======
+<img src="http://atimothee.github.io/images/mypassport_hdd.jpg" /></p>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+<img src="http://timothyasiimwe.me/images/mypassport_hdd.jpg" /></p>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+<img src="http://atimothee.xyz/images/mypassport_hdd.jpg" /></p>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+
+<p>Truly spectacular agent. You gave me oodles of space to download &amp; collect everything I deemed interesting. Yours was perhaps the most untimely departure of all. One fall and alas, you were gone forever and so were more than 500 gigs worth of entertainment, never to be seen again. I know some people who’ll probably miss you more than I will.</p>
+]]></content>
+  </entry>
+  
+=======
+>>>>>>> 5d452c4517120b2b33635b7fb6b443ca842150b2
+</feed>

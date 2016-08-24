@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+<<<<<<< HEAD
+  <title><![CDATA[Category: Reflection | {t.log}]]></title>
+  <link href="http://timothyasiimwe.me/blog/categories/reflection/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2015-02-23T19:47:54+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+=======
+  <title><![CDATA[Category: reflection | Timothy Asiimwe]]></title>
+<<<<<<< HEAD
+<<<<<<< HEAD
+  <link href="http://atimothee.github.io/blog/categories/reflection/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-07-09T21:26:53+03:00</updated>
+  <id>http://atimothee.github.io/</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+  <link href="http://timothyasiimwe.me/blog/categories/reflection/atom.xml" rel="self"/>
+  <link href="http://timothyasiimwe.me/"/>
+  <updated>2016-07-09T21:54:16+03:00</updated>
+  <id>http://timothyasiimwe.me/</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+  <link href="http://atimothee.xyz/blog/categories/reflection/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-08-23T18:09:07+03:00</updated>
+  <id>http://atimothee.xyz/</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+  <author>
+    <name><![CDATA[Timothy Asiimwe]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+<<<<<<< HEAD
+    <title type="html"><![CDATA[Reflections of a Programmer]]></title>
+    <link href="http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+    <id>http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer</id>
+=======
+    <title type="html"><![CDATA[Reflections Of A Programmer]]></title>
+    <link href="http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <updated>2014-08-02T02:09:34+03:00</updated>
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <id>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 6a3288c2e994a9c6e1e96795a8e39c69affd6fb0
+=======
+    <id>http://timothyasiimwe.me/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 9cc73161dac6556422a26cb5f9584398baddfd04
+=======
+    <id>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer</id>
+>>>>>>> 51b0ef641c1e73be365240fe8efc25e355349ba2
+    <content type="html"><![CDATA[<p>Every once in a while I like to reflect on life. And there’s no better time than now. I literally have nothing to chase, no deadline to beat, no books, no exams. So I’ve been thinking, alot about the unobvious benefits of being a software developer.</p>
+
+<p>Programming involves a lot of thinking and overtime, it changes the way you think about life and stuff in general. So here are five important lessons that I’ve learned through my experience writing code for the most part of my waking hours.</p>
+
+<!-- more -->
+
+
+<p><strong>1. It’s okay to fail</strong></p>
+
+<blockquote><p>&ldquo;If at first you don&rsquo;t succeed, call it version 1.0 - Unknown&rdquo;</p></blockquote>
+
+<p>The error log is the developer’s best friend. Errors, exceptions and bugs are all part of the game. Errors<em>(read failures)</em> ought not to be dreaded, but should instead be thought of as the blueprint for how to fix the program or code to run better. Even the mighty Apple and Microsoft of this world have shipped buggy software before. Some have been <a href="http://www.huffingtonpost.com/2013/09/25/apple-maps-bad_n_3990340.html">more embarassing</a> than others but the most important thing is that they release updates and patches. When you fail, instead of stagnating in misery, find out what could have caused it, fix it and release an update. Don&rsquo;t let failure keep you from moving.</p>
+
+<p><strong>2. Faith</strong><br>
+A lot of software developers are willing to take on work they have no idea how to do <em>(Not sure about most, but at least I am)</em>. I think it’s partly because of the excitement of trying out something new, but also because we&rsquo;ve gotten away with it in the past. Somehow, I’ve learned to have the confidence that things will pan out okay, and I&rsquo;ll deliver, no matter how humongous the task at hand is.</p>
+
+<p><strong>3. Great software evolves <em>(Embrace Change)</em> </strong></p>
+
+<blockquote><p>“To improve is to change, to be perfect is to change often” - Winston Churchill</p></blockquote>
+
+<p>If you own a smart device, then I’m sure you receive notifications of apps that want to update almost every week or even every day.</p>
+
+<p>Software changes a lot over its lifetime. The Google home page today is very different from the <a href="http://en.wikipedia.org/wiki/File:Google1998.png">first one in 1998</a>. The same goes for Microsoft Windows and many other programs.</p>
+
+<p>Building software has taught me to embrace change, even radical change. So much changes in so little time in the software industry. The rapid pace of innovation renders some technologies obsolete, so one has to be willing to adapt and try out new stuff. This leads me to the next lesson.</p>
+
+<p><strong>4. Let go</strong><br>
+In line with lesson #3, one thing development has taught me is the art of letting go. Sometimes you have to let go of that piece of code that you spent hours or days writing, either because it&rsquo;s either <a href="http://en.wikipedia.org/wiki/Code_smell">smelly</a> or it&rsquo;s just no longer relevant. Such is the nature of the industry, it moves so fast that at one point or another, you may have to <a href="http://www.infoq.com/articles/twitter-java-use">rewrite your app</a> simply because there&rsquo;s a newer or better way of implementing your solution. And such is life, as we grow, our priorities tend to shift. Therefore, embrace change.</p>
+
+<blockquote><p>“When you become a software engineer, you have signed a life-long pact to never stop learning” - Unknown</p></blockquote>
+
+<p>Nothing cements this more than <a href="http://techcrunch.com/2014/06/02/apple-launches-swift-a-new-programming-language-for-writing-ios-and-os-x-apps/">the news a few weeks back</a> that Apple released a new programming language. Although Objective-C hasn’t been trashed per se, iOS development will shift to <a href="https://developer.apple.com/swift/">Swift</a> as the primary language, so iOS devs have no choice but to adapt to the change.</p>
+
+<p><strong>5. Give back to the community: Freely you have received, freely you should give</strong></p>
+
+<blockquote><p>&ldquo;If I have seen further than others, it is by standing upon the shoulders of giants.&rdquo; - Isaac Newton</p></blockquote>
+
+<p>The average developer is bound to use some open-source library or tool in their work. Big software companies have open-sourced a lot of their software projects and libraries in this spirit. Open-source has driven the software industry to where it is today, so we’re indebited to give back to the software community and society at large.</p>
+
+<p>But even outside the software industry, many products today wouldn&rsquo;t be here without some of the work done by some people generations ago. So every once in a while, do something for community&rsquo;s sake.</p>
+
+<p><strong>The downside:</strong><br>
+You cant roll back life:
+If you’re familiar with version control, then you know that you can roll back to a previous commit, in case you encounter serious problems with your code base and it will be like it never happened. Unfortunately in the real world, when you eff up, as much as you can move on, the scars remain.</p>
+]]></content>
+  </entry>
+  
+</feed>

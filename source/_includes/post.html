@@ -1,0 +1,15 @@
+{% capture category %}{{ page.categories | category_links | size }}{% endcapture %}
+<article class='post'>
+	<hgroup>
+		<h4><a href='{{ page.url }}'>{{ page.title }}</a></h4>
+		<h6>{{ page.date | date: '%d %B %Y' | downcase }}</h6>
+		<h6>{% if category != '0' %}{{ page.categories | category_links }}{% endif %}</h6>
+	</hgroup>
+	<div>
+		{{ content }}
+		{% if site.disqus_short_name %}
+		<a href='javascript:;' onclick='loadDisqus(this, "{{ root_url }}", "{{ site.disqus_short_name }}", "{{ page.title }}")' class='comments'>comments</a>
+		{% endif %}
+	</div>
+</article>
+<hr>
