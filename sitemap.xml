@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/</loc>
+    <lastmod>2016-09-17T15:53:28+03:00</lastmod>
+  </url>
+  <url>
     <loc>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/</loc>
     <lastmod>2015-02-23T01:11:58+03:00</lastmod>
   </url>
@@ -59,6 +63,15 @@
   </url>
   <url>
     <loc>http://atimothee.github.io/blog/categories/tutorial/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.github.io/blog/categories/firebase/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.github.io/blog/categories/account-kit/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.github.io/blog/categories/firebase-auth/</loc>
   </url>
   <url>
     <loc>http://atimothee.github.io/about.html</loc>
