@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Timothy Asiimwe]]></title>
-  <link href="http://atimothee.xyz/atom.xml" rel="self"/>
-  <link href="http://atimothee.xyz/"/>
-  <updated>2016-09-17T15:24:43+03:00</updated>
-  <id>http://atimothee.xyz/</id>
+  <link href="http://atimothee.github.io/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-09-17T15:31:27+03:00</updated>
+  <id>http://atimothee.github.io/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
     
@@ -16,10 +16,10 @@
   <entry>
     
     <title type="html"><![CDATA[How to easily set up an offline weather API Server for your Sunshine app]]></title>
-    <link href="http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <link href="http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
     
     <updated>2015-02-23T01:11:58+03:00</updated>
-    <id>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+    <id>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
     
     <content type="html"><![CDATA[<p>So you&rsquo;re eager to get on with Lesson 2 of the <a href="https://www.udacity.com/course/ud853">Udacity Android fundamentals course</a> but if you&rsquo;re like most students in our <a href="http://developerstudyjams.com/">study jam</a>, you don&rsquo;t have good internet access &amp; you&rsquo;ve been using offline course materials. The course has probably been going great till you hit the internet roadblock in lesson 2 (Connecting Sunshine to the cloud). The app needs internet to fetch the weather data.</p>
 
@@ -115,10 +115,10 @@ We&rsquo;re not interested in the data&rsquo;s accuracy.</p>
   <entry>
     
     <title type="html"><![CDATA[Reflections Of A Programmer]]></title>
-    <link href="http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <link href="http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer/"/>
     
     <updated>2014-08-02T02:09:34+03:00</updated>
-    <id>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer</id>
+    <id>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer</id>
     
     <content type="html"><![CDATA[<p>Every once in a while I like to reflect on life. And there’s no better time than now. I literally have nothing to chase, no deadline to beat, no books, no exams. So I’ve been thinking, alot about the unobvious benefits of being a software developer.</p>
 
@@ -171,10 +171,10 @@ If you’re familiar with version control, then you know that you can roll back 
   <entry>
     
     <title type="html"><![CDATA[The Stars of 2013: Remembering the Fallen Soldiers]]></title>
-    <link href="http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <link href="http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
     
     <updated>2013-12-30T20:05:15+03:00</updated>
-    <id>http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+    <id>http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
     
     <content type="html"><![CDATA[<p>If you watch <a href="http://www.imdb.com/title/tt1796960/">Homeland</a> or are familiar with CIA operation, then you probably know what happens when an agent dies in the line of service. They become a star, which is placed on <a href="http://en.wikipedia.org/wiki/CIA_Memorial_Wall">the memorial wall</a> at an emotional ceremony and words along these lines will be said -</p>
 
@@ -187,17 +187,17 @@ If you’re familiar with version control, then you know that you can roll back 
 <p>I share the same sentiment with him, except that in my case my devices are the soldiers. Unfortunately, some times these soldiers don’t make it back from the battle. As this year winds down, I have three stars to put up and I think they deserve honourable mention here.</p>
 
 <p><strong>1. Special Agent HP P</strong><br>
-<img src="http://atimothee.xyz/images/hp_probook.jpg" /></p>
+<img src="http://atimothee.github.io/images/hp_probook.jpg" /></p>
 
 <p>This guy was the true definition of “Service above self”. He was always up for the task, even when I asked for the impossible from him. He went through a number of clean installations but still emerged sentient. Dude condensed a whole flask of water but still continued diligently serving. I couldn’t have asked for more from you agent. Unfortunately, Kampala’s sharp guys managed to snack you away from me.(A story for another day). You, agent HP P saw me advance from Hello World! to real world code, and for that I’m truly grateful.</p>
 
 <p><strong>2. Agent 3GS</strong><br>
-<img src="http://atimothee.xyz/images/iphone_3gs.jpg" /></p>
+<img src="http://atimothee.github.io/images/iphone_3gs.jpg" /></p>
 
 <p>Another great agent. Unfortunately he entered a comma that he’ll probably never recover from. The experts call it a bricked state. My futile jailbreaking attempts to keep him up to date with Apple are responsible for his demise. But nonetheless, his was a life like no other. He introduced me to the world of smartphones.</p>
 
 <p><strong>3. Agent WD</strong><br>
-<img src="http://atimothee.xyz/images/mypassport_hdd.jpg" /></p>
+<img src="http://atimothee.github.io/images/mypassport_hdd.jpg" /></p>
 
 <p>Truly spectacular agent. You gave me oodles of space to download &amp; collect everything I deemed interesting. Yours was perhaps the most untimely departure of all. One fall and alas, you were gone forever and so were more than 500 gigs worth of entertainment, never to be seen again. I know some people who’ll probably miss you more than I will.</p>
 ]]></content>

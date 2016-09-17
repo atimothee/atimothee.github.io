@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: reflection | Timothy Asiimwe]]></title>
-  <link href="http://atimothee.xyz/blog/categories/reflection/atom.xml" rel="self"/>
-  <link href="http://atimothee.xyz/"/>
-  <updated>2016-09-17T15:24:43+03:00</updated>
-  <id>http://atimothee.xyz/</id>
+  <link href="http://atimothee.github.io/blog/categories/reflection/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-09-17T15:31:27+03:00</updated>
+  <id>http://atimothee.github.io/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Reflections Of A Programmer]]></title>
-    <link href="http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <link href="http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer/"/>
     <updated>2014-08-02T02:09:34+03:00</updated>
-    <id>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer</id>
+    <id>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer</id>
     <content type="html"><![CDATA[<p>Every once in a while I like to reflect on life. And there’s no better time than now. I literally have nothing to chase, no deadline to beat, no books, no exams. So I’ve been thinking, alot about the unobvious benefits of being a software developer.</p>
 
 <p>Programming involves a lot of thinking and overtime, it changes the way you think about life and stuff in general. So here are five important lessons that I’ve learned through my experience writing code for the most part of my waking hours.</p>
