@@ -1,0 +1,90 @@
+@import 'reset';
+@import 'variables';
+@import 'typography';
+@import 'layout';
+@import 'post';
+@import 'responsive';
+
+/* General Styles */
+
+.hidden {
+	display: none;
+	height: 0;
+	width: 0;
+}
+
+a {
+	color: $link-color;  
+}
+
+a:hover {
+	@include hover-styling;
+}
+
+body {
+	background-color: $background-color;
+	color: $font-color;
+	font-family: $default-font;
+}
+
+code, pre {
+	margin: 12px 0;
+}
+
+div {
+	line-height: 1.3;
+}
+
+h1, h2, h3, h4, h5 {
+	color: $heading-color;
+	font-family: $heading-font;
+}
+
+img {
+	background-color: $background-color;
+	border: 3px solid $rule-color;
+	display: block;
+	margin: 12px auto;
+}
+
+p {
+	line-height: 1.5;
+	margin-bottom: 24px;
+}
+
+/* source/index and category_index */
+
+.pagination {
+	margin-bottom: 40px;
+
+	span {
+		color: $heading-color;
+	}
+}
+
+.categories {
+	text-align: center;
+
+	h6 {
+		font-family: $heading-font;
+	}
+}
+
+.index {
+	margin: 60px 0;
+
+	h5 {
+		margin-bottom: 12px;
+	}
+
+	h6 {
+		font-family: $heading-font;
+		margin-bottom: 12px;
+	}
+}
+
+/* about */
+
+#about {
+	margin-bottom: 30px;
+}

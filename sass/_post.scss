@@ -1,0 +1,31 @@
+.post {
+	margin-bottom: 60px;
+
+	hgroup {
+		text-align: center;
+
+		h4 {
+			font-weight: 600;
+			letter-spacing: -2px;
+			margin-bottom: 24px;
+
+			a {
+				text-decoration: none;
+			}
+
+			a:hover {
+				background: none;
+				color: $heading-color;
+			}
+		}
+
+		h6 {	
+			color: $heading-color;		
+			margin-bottom: 8px;
+		}
+
+		h6:last-child {
+			margin-bottom: 40px;
+		}
+	}
+}
