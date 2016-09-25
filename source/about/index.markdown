@@ -1,12 +1,20 @@
 ---
 layout: page
-comments: false
+comments: true
 sharing: false
 footer: false
 keywords: "timothy, asiimwe, about, bio"
 description: "About Timothy Asiimwe"
 ---
-Hello, I'm Timothy Asiimwe. I'm a passionate software developer & a student of Electrical Engineering. I love creating software for personal, commercial and open source projects.
->I hope to make the world a better place one line of code at a time.
+My name Timothy Asiimwe. I'm a software engineer living/working in Kampala. I'm the co-founder/CTO @ [Panya](http://panya.ug), a Ugandan startup, focused on building a chat-based platform for the best online services & products in Kampala.
 
-I’ll be posting and sharing thoughts, ideas, experiences, and other things of interest. You're welcome to follow along. My open source work is available on [GitHub]('http://github.com/atimothee'), while my work history is on [LinkedIn]('http://ug.linkedin.com/in/timothyasiimwe'). And if you’d like to say hello, you’re more than welcome to do so at "atimothee at gmail dot com".
+This is where I come to share my thoughts, experiences, and hopefully help and/or inspire others. And if you’d like to say hello, you’re more than welcome to do so at "atimothee at gmail dot com".
+
+
+<div class="social-icons">
+    {% include asides/social/facebook.html %}
+    {% include asides/social/linkedin.html %}
+    {% include asides/social/googleplus.html %}
+    {% include asides/social/github.html %}
+    {% include asides/social/twitter.html %}
+  </div>
