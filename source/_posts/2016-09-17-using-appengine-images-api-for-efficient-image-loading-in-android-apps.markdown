@@ -18,6 +18,8 @@ This enables you to crop or resize images #on-the-fly#
 
 That is a very handy feature if your trying to load images on mobile screens with differing screen sizes, in a data-friendly manner & as fast, as possible.
 
+this is especially true if you're targeting african market, due to prohibitive data costs & screeen size
+
 One way to do it on Android, is to calculate the screen width, and request an image with just the dimesions of the longest edge, and appengine will do the rest.
 
 
