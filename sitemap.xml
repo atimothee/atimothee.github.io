@@ -20,25 +20,22 @@
     <loc>http://atimothee.github.io/404.html</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/</loc>
+    <loc>http://atimothee.github.io/about/</loc>
   </url>
   <url>
     <loc>http://atimothee.github.io/archives/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/about/</loc>
+    <loc>http://atimothee.github.io/blog/archives/</loc>
+  </url>
+  <url>
+    <loc>http://atimothee.github.io/blog/</loc>
   </url>
   <url>
     <loc>http://atimothee.github.io/index/</loc>
   </url>
   <url>
     <loc>http://atimothee.github.io/</loc>
-  </url>
-  <url>
-    <loc>http://atimothee.github.io/blog/archives/</loc>
-  </url>
-  <url>
-    <loc>http://atimothee.github.io/about/</loc>
   </url>
   <url>
     <loc>http://atimothee.github.io/blog/categories/programming/</loc>
