@@ -7,19 +7,19 @@ categories:
 published: false
 ---
 
-I recently run into some trouble when trying to use the Firebase REST API, from within a python web app. I needed an access_token to access data protected by [Firebase Realtime Database Rules](https://firebase.google.com/docs/database/security/securing-data.html), but couldn't figure out how to get one using my service account credentials file. [Firebase documentation]() provides a guide on how to get the token when using Java & Nodejs, but makes no mention on how to achieve this using Python.
+I recently run into some trouble when trying to use the Firebase REST API, from within a python web app. I needed an `access_token` to access data protected by [Firebase Realtime Database Rules](https://firebase.google.com/docs/database/security/securing-data.html), but couldn't figure out how to get one using my service account credentials file. [Firebase documentation](https://firebase.google.com/docs/server/setup) provides a guide on how to get the token when using Java & Nodejs, but makes no mention on how to achieve this using Python.
 
 After digging around, I figured it is actually possible, using the [Google API Client Library for python](https://developers.google.com/api-client-library/python/start/installation).
 
 ##confirm if that is the actual lib
 
-You can install it using pip
+First, you need to install it using pip
 
 {% highlight shell %}
 $ pip install --upgrade google-api-python-client
 {% endhighlight %}
 
-Here's how to generate an access token, once you have the [ServiceAccountCredential file]().
+Here's how to generate an access token, once you have the [ServiceAccountCredential file](https://firebase.google.com/docs/server/setup).
 
 
 {% highlight python %}

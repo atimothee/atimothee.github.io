@@ -4,7 +4,7 @@
 
 url: http://atimothee.github.io
 title: "Timothy Asiimwe"
-subtitle: "Coder at heart"
+subtitle: "Ones, Zeroes & Everything In Between"
 author: Timothy Asiimwe
 simple_search: https://www.google.com/search
 description: Timothy Asiimwe's blog
@@ -109,3 +109,4 @@ navigation:
   url: /index.html
 
 picture_url: /images/timothy_asiimwe.jpg
+gems: [jekyll_github_sample]

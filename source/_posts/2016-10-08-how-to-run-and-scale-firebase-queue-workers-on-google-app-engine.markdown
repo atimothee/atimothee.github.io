@@ -1,15 +1,13 @@
 ---
 layout: post
-title: "How to run Firebase Queues on Google Appengine"
-date: 2016-09-17 15:39:57 +0300
+title: "How To Run &amp; Scale Firebase Queue Workers on Google App Engine"
+date: 2016-10-08 17:31:50 +0300
 comments: true
 categories: 
-published: false
 ---
-
 If you're using Firebase with a server to perform tasks like perform background work like generating thumbnails of images, filtering message contents and censoring data, or fanning data out to multiple locations in your Firebase database, chances are using (or need to use) [firebase-queue](https://firebase.googleblog.com/2015/05/introducing-firebase-queue_97.html)
 
-This isn't a tutorial on how to use [firebase-queue](https://github.com/firebase/firebase-queue), it is simply to show you how you can host your queue workers in a scalable environment (Google app engine). If you're want to learn how to use Firebase Queues, there's a great guide [here](https://github.com/firebase/firebase-queue/blob/master/docs/guide.md).
+This isn't a tutorial on how to use [firebase-queue](https://github.com/firebase/firebase-queue), it is simply to show you how you can host your queue workers in a scalable environment (Google app engine). <!-- more -->If you're want to learn how to use Firebase Queues, there's a great guide [here](https://github.com/firebase/firebase-queue/blob/master/docs/guide.md).
 
 firebase-queue is only available for Node.
 
@@ -17,7 +15,7 @@ firebase-queue is only available for Node.
 
 [Google app engine](https://cloud.google.com/appengine/) provides an easy to use platform for developers to build, deploy, manage and automatically scale services on Google’s infrastructure. There are no servers for you to provision or maintain.
 
-#Installing Stuff
+#Installing
 
 Assuming you’ve already installed [Node.js](https://nodejs.org/), create a directory to hold your application, and make that your working directory.
 {% highlight shell %}
@@ -156,7 +154,7 @@ resources:
 {% endhighlight %}
 Read more about how to configure resources [here](https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml#resource-settings).
 
-App engine will reduce or increase the number of instances of your app basing on the load (and your scaling configuration), and since, we initialize a firebase-queue in our app.js, a new queue worker will be created everytime a new instance is created. >Effectively, `number of instances == number of queue workers`.
+App engine will reduce or increase the number of instances of your app basing on the load (and your scaling configuration), and since, we initialize a firebase-queue in our app.js, a new queue worker will be created everytime a new instance is created. So, `number of instances == number of queue workers`.
 
 >The beauty of Firebase-Queue is that multiple queue workers can be initialized on multiple machines and Firebase-Queue will ensure that only one worker is processing a single queue task at a time. So using Google App Engine is a nice way to autoscale your firebase worker-queues.
 
