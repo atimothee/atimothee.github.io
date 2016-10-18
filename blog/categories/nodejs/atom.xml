@@ -4,7 +4,7 @@
   <title><![CDATA[Category: nodejs | Timothy Asiimwe]]></title>
   <link href="http://atimothee.github.io/blog/categories/nodejs/atom.xml" rel="self"/>
   <link href="http://atimothee.github.io/"/>
-  <updated>2016-10-18T12:30:17+03:00</updated>
+  <updated>2016-10-18T12:32:31+03:00</updated>
   <id>http://atimothee.github.io/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
@@ -156,7 +156,7 @@ This worker will continue running for as long as the instance is running.</p>
 <p>You only need to specify the minimum and maximum number of instances when using auto-scaling, the rest are optional.
 App engine will average CPU use across running instances. The value your specify for <code>target_utilization</code> is used to determine whether to reduce or increase the number of instances.</p>
 
-<p>Manual scaling is suitable if you can reliably predict your worker&rsquo;s load @ all times. Auto-scaling is more suitable is your app (queue workers) experiences spikes in usage. See example below:
+<p>Manual scaling is suitable if you can reliably predict your worker&rsquo;s load @ all times. Auto-scaling is more suitable if your app (queue workers) experiences spikes in usage. See example below:
 <div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">&lt;/p&gt;</span>
 
 <span class="s">&lt;h1&gt;manual scaling&lt;/h1&gt;</span>
