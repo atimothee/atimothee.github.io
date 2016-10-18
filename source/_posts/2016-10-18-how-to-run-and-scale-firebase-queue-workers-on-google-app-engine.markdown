@@ -1,10 +1,9 @@
 ---
 layout: post
-title: "How To Run &amp; Scale Firebase Queue Workers on Google App Engine"
-date: 2016-10-17 17:48:50 +0300
+title: "How To Run &amp; Scale Firebase Queue Workers On Google App Engine"
+date: 2016-10-18 12:23:32 +0300
 comments: true
-categories: 
-published: false
+categories: [firebase, firebase-queue, google-app-engine, nodejs]
 ---
 If you're using Firebase with a server to perform tasks like generating thumbnails of images, filtering message contents and censoring data, or fanning data out to multiple locations in your Firebase database, chances are you're using (or [need to use]((https://firebase.googleblog.com/2015/05/introducing-firebase-queue_97.html)) [Firebase Queue](https://github.com/firebase/firebase-queue).
 
