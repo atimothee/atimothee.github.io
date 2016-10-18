@@ -24,3 +24,15 @@ One way to do it on Android, is to calculate the screen width, and request an im
 
 
 Please note it may not be a good idea, to compute the width every single time an image is loaded. A better way to do this could be o save the dimensions the first time the app loads & save these to prefernces, because the device dimesnions will never cahnge.
+
+{%highlight java%}
+ DisplayMetrics displayMetrics = context.getResources().getDisplayMetrics();
+        this.imageWidth = (int) (displayMetrics.widthPixels);
+        this.isTablet = mContext.getResources().getBoolean(R.bool.isTablet);
+        if (isTablet) {
+            int spanCount = mContext.getResources().getInteger(R.integer.span_count);
+            this.imageWidth = (int) ((displayMetrics.widthPixels) / spanCount);
+        }
+{% endhighlight %}
+
+

@@ -1,0 +1,16 @@
+Once you have the access_token from AccountKit. You need to pass it to your server and exchange it for a Firebase Custom token.
+
+The server validates the AccountKit token by making a call to the AccountKit Graph API https://developers.facebook.com/docs/accountkit/graphapi which returns 
+
+{  
+   "id":"12345",
+   "phone":{  
+      "number":"+15551234567"
+      "country_prefix": "1",
+      "national_number": "5551234567"
+   }
+}
+
+Then use Firebase server sdk to generate custom token.
+
+Return that token back to phone and then login

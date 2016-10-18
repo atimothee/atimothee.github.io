@@ -20,7 +20,7 @@ If you're building a chatbot, chances are you want to save some contextual infor
 Enter Memcache, a high availablity, fast key value store (confirm the description). One disadvantage of mecache is ephemerality of the data. This may not be so much of a disadvantage for certain applicaions, but can be remedied by using ndb datastore, and enabling mecache.
 
 
-3. Automatic Scaling
+3. Automatic Scaling built in
 
 
 4. Generous Free Quota:
