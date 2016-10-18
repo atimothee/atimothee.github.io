@@ -166,7 +166,7 @@ You only need to specify the minimum and maximum number of instances when using 
 App engine will average CPU use across running instances. The value your specify for `target_utilization` is used to determine whether to reduce or increase the number of instances.
 
 
-Manual scaling is suitable if you can reliably predict your worker's load @ all times. Auto-scaling is more suitable is your app (queue workers) experiences spikes in usage.
+Manual scaling is suitable if you can reliably predict your worker's load @ all times. Auto-scaling is more suitable if your app (queue workers) experiences spikes in usage. See example below:
 {% highlight yaml%}
 #manual scaling
 manual_scaling:
