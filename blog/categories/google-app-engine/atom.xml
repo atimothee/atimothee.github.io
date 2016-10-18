@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: google-app-engine | Timothy Asiimwe]]></title>
+  <link href="http://atimothee.github.io/blog/categories/google-app-engine/atom.xml" rel="self"/>
+  <link href="http://atimothee.github.io/"/>
+  <updated>2016-10-18T12:28:12+03:00</updated>
+  <id>http://atimothee.github.io/</id>
+  <author>
+    <name><![CDATA[Timothy Asiimwe]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[How To Run &amp; Scale Firebase Queue Workers On Google App Engine]]></title>
+    <link href="http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/"/>
+    <updated>2016-10-18T12:23:32+03:00</updated>
+    <id>http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine</id>
+    <content type="html"><![CDATA[<p>If you&rsquo;re using Firebase with a server to perform tasks like generating thumbnails of images, filtering message contents and censoring data, or fanning data out to multiple locations in your Firebase database, chances are you&rsquo;re using (or <a href="(https://firebase.googleblog.com/2015/05/introducing-firebase-queue_97.html">need to use</a>) <a href="https://github.com/firebase/firebase-queue">Firebase Queue</a>.</p>
+
+<blockquote><p><a href="https://github.com/firebase/firebase-queue">Firebase Queue</a> is a fault-tolerant multi-worker job pipeline built on Firebase. It provides you with a way to organize workers or perform background work on your Firebase database or files.</p></blockquote>
+
+<p>This isn&rsquo;t a tutorial on how to use firebase-queue, it is simply to show you how you can host &amp; run your queue workers in a scalable environment (<a href="https://cloud.google.com/appengine/">Google app engine</a>). <!-- more -->If you&rsquo;re want to learn how to use Firebase Queues, there&rsquo;s a great guide <a href="https://github.com/firebase/firebase-queue/blob/master/docs/guide.md">here</a>.</p>
+
+<p><em><strong>Note:</strong> Firebase-queue is only available for Node.js, so we shall be using the <a href="https://cloud.google.com/appengine/docs/flexible/nodejs/runtime">App Engine Node.js flexible runtime</a>.</em></p>
+
+<h1>Why Google Appengine?</h1>
+
+<p><a href="https://cloud.google.com/appengine/">Google app engine</a> provides an easy to use platform for developers to build, deploy, manage and automatically scale services on Google’s infrastructure. There are no servers for you to provision or maintain.</p>
+
+<h1>Installing</h1>
+
+<p>Assuming you’ve already installed <a href="https://nodejs.org/">Node.js</a>, create a directory to hold your application, and make that your working directory.
+<div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>mkdir myapp
+<span class="gp">$ </span><span class="nb">cd </span>myapp</code></pre></div></p>
+
+<p>Use the npm init command to create a <code>package.json</code> file for your application. For more information on how package.json works, see <a href="https://docs.npmjs.com/files/package.json">Specifics of npm’s package.json handling</a>.</p>
+
+<p><div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>npm init</code></pre></div></p>
+
+<p>This command prompts you for a number of things, such as the name and version of your application. For now, you can simply hit RETURN to accept the defaults for most of them, with the following exception:
+<div class="highlight"><pre><code class="language-shell" data-lang="shell">entry point: <span class="o">(</span>index.js<span class="o">)</span></code></pre></div></p>
+
+<p>Enter <code>app.js</code>, or whatever you want the name of the main file to be. If you want it to be <code>index.js</code>, hit RETURN to accept the suggested default file name.</p>
+
+<p>Now install <a href="https://www.npmjs.com/package/express">Express</a>, <a href="https://www.npmjs.com/package/firebase">Firebase</a> &amp; <a href="https://www.npmjs.com/package/firebase-queue">Firebase-Queue</a> dependencies in the myapp directory and save them in the dependencies list.</p>
+
+<p><div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>npm install express &amp;ndash;save
+<span class="gp">$ </span>npm install firebase firebase-queue &amp;ndash;save</code></pre></div></p>
+
+<p>Next you need to <a href="https://cloud.google.com/sdk/docs/">install Google Cloud SDK</a>, in order to be able to deploy to app engine.</p>
+
+<h1>Coding the app</h1>
+
+<p>In the myapp directory, in the <code>app.js</code> file you created above, start your queue worker as shown below:
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">express</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">express</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+<span class="kd">var</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">();</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">firebase</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">firebase</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;);</span>
+<span class="nx">firebase</span><span class="p">.</span><span class="nx">initializeApp</span><span class="p">({</span>
+  <span class="na">serviceAccount</span><span class="p">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="nx">service_account</span><span class="p">.</span><span class="nx">json</span><span class="o">&amp;</span><span class="nx">rdquo</span><span class="p">;,</span>
+  <span class="na">databaseURL</span><span class="p">:</span> <span class="o">&amp;</span><span class="nx">ldquo</span><span class="p">;</span><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">"https://databaseName.firebaseio.com"</span><span class="o">&gt;</span><span class="na">https</span><span class="p">:</span><span class="c1">//databaseName.firebaseio.com&lt;/a&gt;&amp;rdquo;</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">Queue</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">firebase</span><span class="o">-</span><span class="nx">queue</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;)</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="c1">//start your worker here</span>
+<span class="kd">var</span> <span class="nx">ref</span> <span class="o">=</span> <span class="nx">firebase</span><span class="p">.</span><span class="nx">database</span><span class="p">().</span><span class="nx">ref</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">queue</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+<span class="kd">var</span> <span class="nx">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Queue</span><span class="p">(</span><span class="nx">ref</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">progress</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Read and process task data</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Do some work</span>
+  <span class="nx">progress</span><span class="p">(</span><span class="mi">50</span><span class="p">);</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>  <span class="c1">// Finish the task asynchronously</span>
+  <span class="nx">setTimeout</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">resolve</span><span class="p">();</span>
+  <span class="p">},</span> <span class="mi">1000</span><span class="p">);</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">app</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="sr">/&amp;rsquo;, function </span><span class="se">(</span><span class="sr">req, res</span><span class="se">)</span><span class="sr"> </span><span class="err">{
+</span>  <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">The</span> <span class="nx">Firebase</span> <span class="nx">Queue</span> <span class="nx">worker</span> <span class="nx">is</span> <span class="nx">running</span><span class="o">!&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+<span class="p">});</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">server</span> <span class="o">=</span> <span class="nx">app</span><span class="p">.</span><span class="nx">listen</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">PORT</span> <span class="o">||</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="mi">8080</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">App</span> <span class="nx">listening</span> <span class="nx">on</span> <span class="nx">port</span> <span class="o">%</span><span class="nx">s</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span> <span class="nx">server</span><span class="p">.</span><span class="nx">address</span><span class="p">().</span><span class="nx">port</span><span class="p">);</span>
+  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">Press</span> <span class="nx">Ctrl</span><span class="o">+</span><span class="nx">C</span> <span class="nx">to</span> <span class="nx">quit</span><span class="p">.</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;);</span>
+<span class="p">});</span></code></pre></div></p>
+
+<p>The above code starts a queue worker which simply logs the task data passed to it, and then starts an express server.
+This worker will continue running for as long as the instance is running.</p>
+
+<p>Next, you need to create an <code>app.yaml</code> file in the myapp directory, which will be used to deploy the app to appengine.</p>
+
+<p><div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">runtime</span><span class="pi">:</span> <span class="s">nodejs</span>
+<span class="na">vm</span><span class="pi">:</span> <span class="s">true</span></code></pre></div></p>
+
+<p>Before we can deploy, we need to edit the <code>"scripts"</code> and <code>"engines"</code> properties in the <code>package.json</code> file so that our app can run on app engine.</p>
+
+<p><div class="highlight"><pre><code class="language-json" data-lang="json"><span class="err">&amp;ldquo;engines&amp;rdquo;:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">&amp;ldquo;node&amp;rdquo;:</span><span class="w"> </span><span class="err">&amp;ldquo;~4.2&amp;rdquo;</span><span class="w">
+  </span><span class="p">}</span><span class="err">,</span><span class="w">
+</span><span class="err">&amp;ldquo;scripts&amp;rdquo;:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="err">&amp;ldquo;start&amp;rdquo;:</span><span class="w"> </span><span class="err">&amp;ldquo;node</span><span class="w"> </span><span class="err">app.js&amp;rdquo;,</span><span class="w">
+    </span><span class="err">&amp;ldquo;monitor&amp;rdquo;:</span><span class="w"> </span><span class="err">&amp;ldquo;nodemon</span><span class="w"> </span><span class="err">app.js&amp;rdquo;,</span><span class="w">
+    </span><span class="err">&amp;ldquo;deploy&amp;rdquo;:</span><span class="w"> </span><span class="err">&amp;ldquo;gcloud</span><span class="w"> </span><span class="err">app</span><span class="w"> </span><span class="err">deploy&amp;rdquo;</span><span class="w">
+  </span><span class="p">}</span></code></pre></div></p>
+
+<p>Finally, deploy the app to appengine:</p>
+
+<p><div class="highlight"><pre><code class="language-shell" data-lang="shell"><span class="gp">$ </span>gcloud app deploy app.yaml</code></pre></div></p>
+
+<p>To test the worker, you can push an object with some data to the tasks subtree of your queue:</p>
+
+<p><div class="highlight"><pre><code class="language-shell" data-lang="shell">&lt;/p&gt;
+
+&lt;h1&gt;Using curl <span class="k">in </span>shell&lt;/h1&gt;
+
+<span class="gp">&lt;p&gt;$ </span>curl -X POST -d &amp;lsquo;<span class="o">{</span>&amp;ldquo;foo&amp;rdquo;: &amp;ldquo;bar&amp;rdquo;<span class="o">}</span>&amp;rsquo; &lt;a <span class="nv">href</span><span class="o">=</span><span class="s2">"https://databaseName.firebaseio.com/queue/tasks.json"</span>&gt;https://databaseName.firebaseio.com/queue/tasks.json&lt;/a&gt;</code></pre></div></p>
+
+<p>You should see &lsquo;{&ldquo;foo&rdquo;: &ldquo;bar&rdquo;}&rsquo; somewhere in your logs, or which ever data you posted.</p>
+
+<p>Although the <code>app.js</code> code above initialized only one worker, Queue Workers can take options to specify the number of initial workers to run simultaneously for a single node.js thread.</p>
+
+<p><div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">specId</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;:</span> <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">spec_1</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;,</span>
+  <span class="o">&amp;</span><span class="nx">lsquo</span><span class="p">;</span><span class="nx">numWorkers</span><span class="o">&amp;</span><span class="nx">rsquo</span><span class="p">;:</span> <span class="mi">5</span><span class="p">,</span>
+<span class="p">};</span><span class="o">&lt;</span><span class="sr">/p</span><span class="err">&gt;
+</span>
+<span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="kd">var</span> <span class="nx">queue</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Queue</span><span class="p">(</span><span class="nx">ref</span><span class="p">,</span> <span class="nx">options</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">,</span> <span class="nx">progress</span><span class="p">,</span> <span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="p">{</span>
+  <span class="o">&amp;</span><span class="nx">hellip</span><span class="p">;</span>
+<span class="p">});</span></code></pre></div></p>
+
+<p>The above code initializes 5 workers on a single thread. Depending on your application needs and CPU resources, you may want to initalize multiple workers.</p>
+
+<h1>Scaling on App engine</h1>
+
+<p>Every app engine application is auto-scaled by default basing on certain default parameters. However, you can control how/when you want your app to be scaled. You can use either auto or manual scaling, depending in your application needs.</p>
+
+<p>Here&rsquo;s an example of how to configure your <code>app.yaml</code> for auto-scaling:</p>
+
+<p><div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">&lt;/p&gt;</span>
+
+<span class="s">&lt;h1&gt;auto scaling&lt;/h1&gt;</span>
+
+<span class="s">&lt;p&gt;automatic_scaling</span><span class="pi">:</span>
+  <span class="na">min_num_instances</span><span class="pi">:</span> <span class="s">1</span>
+  <span class="na">max_num_instances</span><span class="pi">:</span> <span class="s">10</span>
+  <span class="na">cool_down_period_sec</span><span class="pi">:</span> <span class="s">120</span> <span class="c1"># default value</span>
+  <span class="na">cpu_utilization</span><span class="pi">:</span>
+    <span class="na">target_utilization</span><span class="pi">:</span> <span class="s">0.75</span></code></pre></div></p>
+
+<p>You only need to specify the minimum and maximum number of instances when using auto-scaling, the rest are optional.
+App engine will average CPU use across running instances. The value your specify for <code>target_utilization</code> is used to determine whether to reduce or increase the number of instances.</p>
+
+<p>Manual scaling is suitable if you can reliably predict your worker&rsquo;s load @ all times. Auto-scaling is more suitable is your app (queue workers) experiences spikes in usage.
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="s">&lt;/p&gt;</span>
+
+<span class="s">&lt;h1&gt;manual scaling&lt;/h1&gt;</span>
+
+<span class="s">&lt;p&gt;manual_scaling</span><span class="pi">:</span>
+  <span class="na">instances</span><span class="pi">:</span> <span class="s">3</span></code></pre></div></p>
+
+<p>You can also specify the computing power/resources for each instance, depending on your needs:
+<div class="highlight"><pre><code class="language-yaml" data-lang="yaml"><span class="na">resources</span><span class="pi">:</span>
+  <span class="na">cpu</span><span class="pi">:</span> <span class="s">.5</span>
+  <span class="na">memory_gb</span><span class="pi">:</span> <span class="s">1.3</span>
+  <span class="na">disk_size_gb</span><span class="pi">:</span> <span class="s">10</span></code></pre></div>
+<code>cpu</code> represents the number of cores (it can be less than a fraction). <code>memory_gb</code> is RAM in GB.</p>
+
+<blockquote><p>The beauty of Firebase-Queue is that multiple queue workers can be initialized on multiple machines and Firebase-Queue will ensure that only one worker is processing a single queue task at a time. So using Google App Engine is a nice way to autoscale your firebase worker-queues.</p></blockquote>
+
+<p>And that&rsquo;s how you can effortlessly scale firebase queue workers with Google App engine. Got any questions? Ping me on Twitter: <a href="https://twitter.com/TimAsiimwe">@TimAsiimwe</a>, I’d be happy to chat!</p>
+
+<p><em><strong>Note:</strong> In order to use Flexible VMs, you need to enable billing for your project in the <a href="https://console.cloud.google.com">Google Cloud Console</a>.</em></p>
+
+<p>For more on how to configure your app engine app, read <a href="https://cloud.google.com/appengine/docs/flexible/nodejs/configuring-your-app-with-app-yaml">the documentation</a>.</p>
+
+<p>References:
+<a href="https://expressjs.com/en/starter/installing.html">https://expressjs.com/en/starter/installing.html</a>
+<a href="https://github.com/firebase/firebase-queue/blob/master/docs/guide.md">https://github.com/firebase/firebase-queue/blob/master/docs/guide.md</a></p>
+]]></content>
+  </entry>
+  
+</feed>
