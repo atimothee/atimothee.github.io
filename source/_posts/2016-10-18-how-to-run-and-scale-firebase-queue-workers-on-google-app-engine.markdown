@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "How To Run &amp; Scale Firebase Queue Workers On Google App Engine"
+title: "How To Run And Scale Firebase Queue Workers On Google App Engine"
 date: 2016-10-18 12:23:32 +0300
 comments: true
 categories: [firebase, firebase-queue, google-app-engine, nodejs]
