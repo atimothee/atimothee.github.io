@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Timothy Asiimwe]]></title>
-  <link href="http://atimothee.github.io/atom.xml" rel="self"/>
-  <link href="http://atimothee.github.io/"/>
-  <updated>2016-10-22T00:30:18+03:00</updated>
-  <id>http://atimothee.github.io/</id>
+  <link href="http://atimothee.xyz/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-10-22T00:38:42+03:00</updated>
+  <id>http://atimothee.xyz/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
     
@@ -15,18 +15,18 @@
   
   <entry>
     <title type="html"><![CDATA[This Is a Test]]></title>
-    <link href="http://atimothee.github.io/blog/2016/10/22/this-is-a-test/"/>
+    <link href="http://atimothee.xyz/blog/2016/10/22/this-is-a-test/"/>
     <updated>2016-10-22T00:29:55+03:00</updated>
-    <id>http://atimothee.github.io/blog/2016/10/22/this-is-a-test</id>
+    <id>http://atimothee.xyz/blog/2016/10/22/this-is-a-test</id>
     <content type="html"><![CDATA[
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[How to Run and Scale Firebase Queue Workers on Google App Engine]]></title>
-    <link href="http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/"/>
+    <link href="http://atimothee.xyz/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/"/>
     <updated>2016-10-18T12:23:32+03:00</updated>
-    <id>http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine</id>
+    <id>http://atimothee.xyz/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine</id>
     <content type="html"><![CDATA[<p>If you&rsquo;re using Firebase with a server to perform tasks like generating thumbnails of images, filtering message contents and censoring data, or fanning data out to multiple locations in your Firebase database, chances are you&rsquo;re using (or <a href="(https://firebase.googleblog.com/2015/05/introducing-firebase-queue_97.html">need to use</a>) <a href="https://github.com/firebase/firebase-queue">Firebase Queue</a>.</p>
 
 <blockquote><p><a href="https://github.com/firebase/firebase-queue">Firebase Queue</a> is a fault-tolerant multi-worker job pipeline built on Firebase. It provides you with a way to organize workers or perform background work on your Firebase database or files.</p></blockquote>
@@ -208,9 +208,9 @@ App engine will average CPU use across running instances. The value your specify
   
   <entry>
     <title type="html"><![CDATA[How to Use Facebook Account Kit to Authenticate Firebase App Users on Android]]></title>
-    <link href="http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/"/>
+    <link href="http://atimothee.xyz/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/"/>
     <updated>2016-09-17T15:53:28+03:00</updated>
-    <id>http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android</id>
+    <id>http://atimothee.xyz/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android</id>
     <content type="html"><![CDATA[<p>A few months ago Facebook released <a href="https://developers.facebook.com/docs/accountkit/overview">Account Kit</a> which &ldquo;helps people quickly and easily register and log into your app using their phone number or email address as a passwordless credential&rdquo;.</p>
 
 <p>Account Kit is really really helpful for a couple of reasons; users don&rsquo;t need to remember a password for your app, it supports SMS-based authentication for hundreds of countries, and it&rsquo;s really easy to setup.</p>
@@ -234,9 +234,9 @@ Firebase only has Server SDKs for Java and NodeJS (at the moment), so you need t
 
 <p>Adding Cloud Endpoints to an Android Studio project is trivial. Go to File > New > New Module &hellip; and select Google Cloud Module as shown in screenshots below.</p>
 
-<p><img src="http://atimothee.github.io/images/android_studio_new_module_screenshot.png"></p>
+<p><img src="http://atimothee.xyz/images/android_studio_new_module_screenshot.png"></p>
 
-<p><img src="http://atimothee.github.io/images/new_google_cloud_module_screenshot.png"></p>
+<p><img src="http://atimothee.xyz/images/new_google_cloud_module_screenshot.png"></p>
 
 <p>Once your project&rsquo;s done building, you should have a new module/directory called backend, or whatever you named your Google cloud module.</p>
 
@@ -478,7 +478,7 @@ Alternatively, you could create a new Google cloud project, and specify the appl
 
 <p><strong>Please note that to be able to use the TOKEN response type, you must enable client access token flow in the Facebook developer console, as shown in the screenshot below.</strong></p>
 
-<p><img src="http://atimothee.github.io/images/facebook_console_screenshot.png"></p>
+<p><img src="http://atimothee.xyz/images/facebook_console_screenshot.png"></p>
 
 <p>Next, you need to adapt the onActivityResult method in the Activity that initates the Account Kit login, to execute the LoginUserAsyncTask, once the accountkit user access token is obtained.</p>
 
@@ -590,9 +590,9 @@ Alternatively, you could create a new Google cloud project, and specify the appl
   
   <entry>
     <title type="html"><![CDATA[How to Easily Set Up an Offline Weather API Server for Your Sunshine App]]></title>
-    <link href="http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <link href="http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
     <updated>2015-02-23T01:11:58+03:00</updated>
-    <id>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+    <id>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
     <content type="html"><![CDATA[<p>So you&rsquo;re eager to get on with Lesson 2 of the <a href="https://www.udacity.com/course/ud853">Udacity Android fundamentals course</a> but if you&rsquo;re like most students in our <a href="http://developerstudyjams.com/">study jam</a>, you don&rsquo;t have good internet access &amp; you&rsquo;ve been using offline course materials. The course has probably been going great till you hit the internet roadblock in lesson 2 (Connecting Sunshine to the cloud). The app needs internet to fetch the weather data.</p>
 
 <!-- more -->
@@ -685,9 +685,9 @@ We&rsquo;re not interested in the data&rsquo;s accuracy.</p>
   
   <entry>
     <title type="html"><![CDATA[Reflections of a Programmer]]></title>
-    <link href="http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer/"/>
+    <link href="http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/"/>
     <updated>2014-08-02T02:09:34+03:00</updated>
-    <id>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer</id>
+    <id>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer</id>
     <content type="html"><![CDATA[<p>Every once in a while I like to reflect on life. And there’s no better time than now. I literally have nothing to chase, no deadline to beat, no books, no exams. So I’ve been thinking, alot about the unobvious benefits of being a software developer.</p>
 
 <p>Programming involves a lot of thinking and overtime, it changes the way you think about life and stuff in general. So here are five important lessons that I’ve learned through my experience writing code for the most part of my waking hours.</p>
@@ -737,9 +737,9 @@ If you’re familiar with version control, then you know that you can roll back 
   
   <entry>
     <title type="html"><![CDATA[The Stars of 2013: Remembering the Fallen Soldiers]]></title>
-    <link href="http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
+    <link href="http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/"/>
     <updated>2013-12-30T20:05:15+03:00</updated>
-    <id>http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
+    <id>http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers</id>
     <content type="html"><![CDATA[<p>If you watch <a href="http://www.imdb.com/title/tt1796960/">Homeland</a> or are familiar with CIA operation, then you probably know what happens when an agent dies in the line of service. They become a star, which is placed on <a href="http://en.wikipedia.org/wiki/CIA_Memorial_Wall">the memorial wall</a> at an emotional ceremony and words along these lines will be said -</p>
 
 <blockquote><p>“For the men and women of the CIA, this constellation is more than a memorial, more than a quiet tribute. Each star holds memories of a brave intelligence officer whose example we follow, a treasured colleague whose wisdom we keep, or a lost friend we will miss. <!-- more -->They are our heroes, and that’s how we’ll remember them”</p></blockquote>
@@ -751,17 +751,17 @@ If you’re familiar with version control, then you know that you can roll back 
 <p>I share the same sentiment with him, except that in my case my devices are the soldiers. Unfortunately, some times these soldiers don’t make it back from the battle. As this year winds down, I have three stars to put up and I think they deserve honourable mention here.</p>
 
 <p><strong>1. Special Agent HP P</strong><br>
-<img src="http://atimothee.github.io/images/hp_probook.jpg" /></p>
+<img src="http://atimothee.xyz/images/hp_probook.jpg" /></p>
 
 <p>This guy was the true definition of “Service above self”. He was always up for the task, even when I asked for the impossible from him. He went through a number of clean installations but still emerged sentient. Dude condensed a whole flask of water but still continued diligently serving. I couldn’t have asked for more from you agent. Unfortunately, Kampala’s sharp guys managed to snack you away from me.(A story for another day). You, agent HP P saw me advance from Hello World! to real world code, and for that I’m truly grateful.</p>
 
 <p><strong>2. Agent 3GS</strong><br>
-<img src="http://atimothee.github.io/images/iphone_3gs.jpg" /></p>
+<img src="http://atimothee.xyz/images/iphone_3gs.jpg" /></p>
 
 <p>Another great agent. Unfortunately he entered a comma that he’ll probably never recover from. The experts call it a bricked state. My futile jailbreaking attempts to keep him up to date with Apple are responsible for his demise. But nonetheless, his was a life like no other. He introduced me to the world of smartphones.</p>
 
 <p><strong>3. Agent WD</strong><br>
-<img src="http://atimothee.github.io/images/mypassport_hdd.jpg" /></p>
+<img src="http://atimothee.xyz/images/mypassport_hdd.jpg" /></p>
 
 <p>Truly spectacular agent. You gave me oodles of space to download &amp; collect everything I deemed interesting. Yours was perhaps the most untimely departure of all. One fall and alas, you were gone forever and so were more than 500 gigs worth of entertainment, never to be seen again. I know some people who’ll probably miss you more than I will.</p>
 ]]></content>

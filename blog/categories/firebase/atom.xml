@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: firebase | Timothy Asiimwe]]></title>
-  <link href="http://atimothee.github.io/blog/categories/firebase/atom.xml" rel="self"/>
-  <link href="http://atimothee.github.io/"/>
-  <updated>2016-10-22T00:30:18+03:00</updated>
-  <id>http://atimothee.github.io/</id>
+  <link href="http://atimothee.xyz/blog/categories/firebase/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-10-22T00:38:42+03:00</updated>
+  <id>http://atimothee.xyz/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How To Run And Scale Firebase Queue Workers On Google App Engine]]></title>
-    <link href="http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/"/>
+    <link href="http://atimothee.xyz/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/"/>
     <updated>2016-10-18T12:23:32+03:00</updated>
-    <id>http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine</id>
+    <id>http://atimothee.xyz/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine</id>
     <content type="html"><![CDATA[<p>If you&rsquo;re using Firebase with a server to perform tasks like generating thumbnails of images, filtering message contents and censoring data, or fanning data out to multiple locations in your Firebase database, chances are you&rsquo;re using (or <a href="(https://firebase.googleblog.com/2015/05/introducing-firebase-queue_97.html">need to use</a>) <a href="https://github.com/firebase/firebase-queue">Firebase Queue</a>.</p>
 
 <blockquote><p><a href="https://github.com/firebase/firebase-queue">Firebase Queue</a> is a fault-tolerant multi-worker job pipeline built on Firebase. It provides you with a way to organize workers or perform background work on your Firebase database or files.</p></blockquote>
@@ -187,9 +187,9 @@ App engine will average CPU use across running instances. The value your specify
   
   <entry>
     <title type="html"><![CDATA[How to use Facebook Account Kit to authenticate Firebase app users on Android]]></title>
-    <link href="http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/"/>
+    <link href="http://atimothee.xyz/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/"/>
     <updated>2016-09-17T15:53:28+03:00</updated>
-    <id>http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android</id>
+    <id>http://atimothee.xyz/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android</id>
     <content type="html"><![CDATA[<p>A few months ago Facebook released <a href="https://developers.facebook.com/docs/accountkit/overview">Account Kit</a> which &ldquo;helps people quickly and easily register and log into your app using their phone number or email address as a passwordless credential&rdquo;.</p>
 
 <p>Account Kit is really really helpful for a couple of reasons; users don&rsquo;t need to remember a password for your app, it supports SMS-based authentication for hundreds of countries, and it&rsquo;s really easy to setup.</p>

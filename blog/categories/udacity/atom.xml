@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: udacity | Timothy Asiimwe]]></title>
-  <link href="http://atimothee.github.io/blog/categories/udacity/atom.xml" rel="self"/>
-  <link href="http://atimothee.github.io/"/>
-  <updated>2016-10-22T00:30:18+03:00</updated>
-  <id>http://atimothee.github.io/</id>
+  <link href="http://atimothee.xyz/blog/categories/udacity/atom.xml" rel="self"/>
+  <link href="http://atimothee.xyz/"/>
+  <updated>2016-10-22T00:38:42+03:00</updated>
+  <id>http://atimothee.xyz/</id>
   <author>
     <name><![CDATA[Timothy Asiimwe]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[How to easily set up an offline weather API Server for your Sunshine app]]></title>
-    <link href="http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
+    <link href="http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/"/>
     <updated>2015-02-23T01:11:58+03:00</updated>
-    <id>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
+    <id>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app</id>
     <content type="html"><![CDATA[<p>So you&rsquo;re eager to get on with Lesson 2 of the <a href="https://www.udacity.com/course/ud853">Udacity Android fundamentals course</a> but if you&rsquo;re like most students in our <a href="http://developerstudyjams.com/">study jam</a>, you don&rsquo;t have good internet access &amp; you&rsquo;ve been using offline course materials. The course has probably been going great till you hit the internet roadblock in lesson 2 (Connecting Sunshine to the cloud). The app needs internet to fetch the weather data.</p>
 
 <!-- more -->

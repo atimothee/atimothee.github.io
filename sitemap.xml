@@ -1,94 +1,94 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://atimothee.github.io/blog/2016/10/22/this-is-a-test/</loc>
+    <loc>http://atimothee.xyz/blog/2016/10/22/this-is-a-test/</loc>
     <lastmod>2016-10-22T00:29:55+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/</loc>
+    <loc>http://atimothee.xyz/blog/2016/10/18/how-to-run-and-scale-firebase-queue-workers-on-google-app-engine/</loc>
     <lastmod>2016-10-18T12:23:32+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/</loc>
+    <loc>http://atimothee.xyz/blog/2016/09/17/how-to-use-facebook-account-kit-to-authenticate-firebase-app-users-on-android/</loc>
     <lastmod>2016-09-17T15:53:28+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/</loc>
+    <loc>http://atimothee.xyz/blog/2015/02/23/how-to-easily-set-up-an-offline-weather-api-for-your-sunshine-app/</loc>
     <lastmod>2015-02-23T01:11:58+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/2014/08/02/reflections-of-a-programmer/</loc>
+    <loc>http://atimothee.xyz/blog/2014/08/02/reflections-of-a-programmer/</loc>
     <lastmod>2014-08-02T02:09:34+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/</loc>
+    <loc>http://atimothee.xyz/blog/2013/12/30/the-stars-of-2013-remembering-the-fallen-soldiers/</loc>
     <lastmod>2013-12-30T20:05:15+03:00</lastmod>
   </url>
   <url>
-    <loc>http://atimothee.github.io/404.html</loc>
+    <loc>http://atimothee.xyz/404.html</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/about/</loc>
+    <loc>http://atimothee.xyz/about/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/archives/</loc>
+    <loc>http://atimothee.xyz/archives/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/archives/</loc>
+    <loc>http://atimothee.xyz/blog/archives/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/</loc>
+    <loc>http://atimothee.xyz/blog/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/index/</loc>
+    <loc>http://atimothee.xyz/index/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/</loc>
+    <loc>http://atimothee.xyz/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/programming/</loc>
+    <loc>http://atimothee.xyz/blog/categories/programming/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/reflection/</loc>
+    <loc>http://atimothee.xyz/blog/categories/reflection/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/lessons/</loc>
+    <loc>http://atimothee.xyz/blog/categories/lessons/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/devstudyjam/</loc>
+    <loc>http://atimothee.xyz/blog/categories/devstudyjam/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/android/</loc>
+    <loc>http://atimothee.xyz/blog/categories/android/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/udacity/</loc>
+    <loc>http://atimothee.xyz/blog/categories/udacity/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/gdg/</loc>
+    <loc>http://atimothee.xyz/blog/categories/gdg/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/tutorial/</loc>
+    <loc>http://atimothee.xyz/blog/categories/tutorial/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/firebase/</loc>
+    <loc>http://atimothee.xyz/blog/categories/firebase/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/account-kit/</loc>
+    <loc>http://atimothee.xyz/blog/categories/account-kit/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/firebase-auth/</loc>
+    <loc>http://atimothee.xyz/blog/categories/firebase-auth/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/firebase-queue/</loc>
+    <loc>http://atimothee.xyz/blog/categories/firebase-queue/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/google-app-engine/</loc>
+    <loc>http://atimothee.xyz/blog/categories/google-app-engine/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/blog/categories/nodejs/</loc>
+    <loc>http://atimothee.xyz/blog/categories/nodejs/</loc>
   </url>
   <url>
-    <loc>http://atimothee.github.io/about.html</loc>
+    <loc>http://atimothee.xyz/about.html</loc>
     <lastmod>2016-07-09T20:35:41+03:00</lastmod>
   </url>
 </urlset>
